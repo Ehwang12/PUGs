@@ -143,7 +143,7 @@ body, html {
 }
 .bg {
   /* The image used */
-  background-image: url("http://www.peoyork.com/files/stock-images/golf-ball_f1j2l9ru-graphicstock.jpg");
+  background-image: url("https://images.pexels.com/photos/264258/pexels-photo-264258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 
   /* Half height */
   height: 100%;
@@ -154,3 +154,7 @@ body, html {
   background-size: cover;
 }
 /* Class Selectors End --------*/
+
+/* .view{
+  z-index: -1000;
+} */
