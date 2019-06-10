@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>My PUGS Feed</title>
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -18,10 +20,10 @@
 
 <body>
   <div class="tempting-azure-gradient bg-main">
-  <div class="container-fluid">
+  <div class="container-fluid" id="mainContain">
   
   <!-- Card -->
-  <div class="row">
+  <div class="row" id="rowIndent">
     <div class="col-4">
       <div class="card testimonial-card" id="userCard">
 
@@ -37,7 +39,7 @@
         <div class="card-body">
           <!-- Name -->
           <h4 class="card-title">Sporty McSportster</h4>
-          <a href="#!" class="btn btn-primary" id="createEvent-btn">Create Event</a>
+          <a href="#!" class="btn btn-primary rgba-teal-strong" id="createEvent-btn">Create Event</a>
         </div>
       
       </div>
@@ -71,7 +73,7 @@
   <!-- /Card -->
     
   <!-- My Pugs Card -->  
-  <div class="row">
+  <div class="row" id="rowIndent">
     <div class="col-4">
       <div class="card" id="myPugs">
         <div class="card-header text-center">
@@ -88,11 +90,24 @@
     
     </div>
     <!-- /My Pugs Card -->
+
+    <!-- Copyright container -->
+    <div class="row" id="rowIndent">
+      <div class="col-4">
+          <div class="card" id="copyRightCard">
+            <div class="card-body">
+              <p class="card-text text-center">&#169; Pick Up Games!</p>
+            </div>
+          </div>
+      </div>
+    </div>
  
     <!-- container div -->
     </div>
   <!-- bg div -->
   </div>
+
+  
 
   <!-- /page end-->
 
