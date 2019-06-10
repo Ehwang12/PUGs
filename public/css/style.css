@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* YOUR CUSTOM STYLES */
 
 h1, h2, h3, h4, h5, h6{
@@ -28,6 +29,30 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
   }
+=======
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+  line-height:1.5;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.current{
+  font-variant-caps: all-petite-caps;
+}
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 
   .form-gradient .font-small {
     font-size: 0.8rem; }
@@ -62,9 +87,22 @@ body{
 
 }
 
+<<<<<<< HEAD
 .sendBtn{
   width:50%;
   margin: 0 auto;
+=======
+#goBtn{
+  width:15em;
+}
+
+#helpBtn {
+  top: -3em;
+  right: -1em;
+}
+.tab{
+  text-indent:30px
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 }
 
 input.select-dropdown {
@@ -72,16 +110,20 @@ input.select-dropdown {
   font-size: smaller;
 }
 
+<<<<<<< HEAD
 /* h5{
   color:black;
 }
 h4{
   color: lightslategray;
 } */
+=======
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 .dropdown-content li>a, .dropdown-content li>span {
   color: grey;
   font-size: smaller;
 }
+<<<<<<< HEAD
 /* h1.h1.text-center.text-white.text-bold.mx-auto {
   font-variant: all-small-caps;
 
@@ -90,6 +132,12 @@ h4{
 
 .container {
   max-width: 900px!important;
+=======
+
+
+.container {
+  max-width: 500px!important;
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
   line-height:1.5;
 }
 
@@ -116,4 +164,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
   color:white;
  font-weight: 900!important;
 
+<<<<<<< HEAD
+=======
+}
+
+label {
+  padding-left: 10px;
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 }
