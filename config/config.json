@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "golf",
-=======
-    "password": "root",
->>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
     "database": "exampledb",
     "host": "localhost",
     "port": 8889,
