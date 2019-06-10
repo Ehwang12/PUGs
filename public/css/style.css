@@ -1,31 +1,5 @@
-/* Main Styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
 
-body {
-  margin-bottom: 60px;
-  /* Margin bottom by footer height */
-  line-height: 1.5;
-}
-
-a:hover {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
-  background: #b5bdc8;
-  /* Old browsers */
-  background: -moz-linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5bdc8', endColorstr='#28343b', GradientType=1);
-  /* IE6-9 fallback on horizontal gradient */
-  color: white;
-  font-weight: 900 !important;
-
+<<<<<<< HEAD
 }
 
 label {
@@ -140,6 +114,17 @@ body {
   font-variant-caps: all-petite-caps;
 }
 >>>>>>> 4cdd2c6f315560a2f8868572d92779ef4c00327d
+=======
+.bg {
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+>>>>>>> 94f429302b8a83b1cc0afcc7b67d952b757cd8b5
 
 /* Form Styles */
 /* ----------------------------------------------------*/
@@ -158,6 +143,7 @@ body {
   box-shadow: 0 1px 0 0 #fd9267;
 }
 
+<<<<<<< HEAD
 .form-gradient input[type=text]:focus:not([readonly])+label {
   color: #4f4f4f;
 }
@@ -183,6 +169,11 @@ body {
 
 .form-gradient input[type=password]:focus:not([readonly])+label {
   color: #4f4f4f;
+=======
+.sendBtn{
+  width:50%;
+  margin: 0 auto;
+>>>>>>> 94f429302b8a83b1cc0afcc7b67d952b757cd8b5
 }
   /* Form Styles End -------*/
 
@@ -191,13 +182,28 @@ body {
 }
 >>>>>>> 4cdd2c6f315560a2f8868572d92779ef4c00327d
 
-.dropdown-content li>a,
-.dropdown-content li>span {
+/* h5{
+  color:black;
+}
+h4{
+  color: lightslategray;
+} */
+.dropdown-content li>a, .dropdown-content li>span {
   color: grey;
   font-size: smaller;
 }
+/* h1.h1.text-center.text-white.text-bold.mx-auto {
+  font-variant: all-small-caps;
 
-.bg-new {
+  font-weight: 900;
+} */
+
+.container {
+  max-width: 500px!important;
+  line-height:1.5;
+}
+
+.bg-new{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ce9c9c+0,cc9684+45,cc5d39+100 */
   background: #ce9c9c;
   /* Old browsers */
@@ -230,6 +236,50 @@ body, html {
 }
 /* Class Selectors End --------*/
 
-/* .view{
-  z-index: -1000;
-} */
+label {
+  padding-left: 10px;
+}
+
+/**************** main feed *********************/
+body, html {
+  height: 100%;
+}
+
+#userCard {
+  margin-left: 5%;
+  margin-top:5%;
+}
+
+.card-up {
+  background-image: url(../img/olga-guryanova-167262-unsplash.jpg);
+  background-position-y: 20%;
+  background-position-x: 50%;
+}
+
+#myPugs {
+  margin-left: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#weatherWidget {
+ margin-top: 2%;
+ margin-left:22%;
+}
+
+#weatherWidget > .list-group-horizontal {
+  flex-direction: row;
+  display: flex;
+}
+
+#feedDiv {
+  margin-top: -15%;
+  margin-left: 20%;
+}
+
+.bg-main {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
