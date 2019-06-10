@@ -12,7 +12,7 @@ module.exports = function(app) {
   
   //this  will be the splash page route
   app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname,"../public/landingPage.html"))
+    res.sendFile(path.join(__dirname,"public\landingPage.html"))
   });
 
   //this route will post new user information into the database
