@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var user = sequelize.define("user", {
+  var User = sequelize.define("User", {
     name: DataTypes.STRING,
     email: DataTypes.STRING,
     city: DataTypes.STRING
@@ -13,8 +13,8 @@ module.exports = function(sequelize, DataTypes) {
     city: DataTypes.STRING
   });
 
-  user.belongsTo(pickUpGame);
-  pickUpGame.hasMany(user);
+  User.belongsTo(pickUpGame);
+  pickUpGame.hasMany(User);
 
-  return user, pickUpGame;
+  return User, pickUpGame;
 };
