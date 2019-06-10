@@ -23,9 +23,6 @@ module.exports = function(app) {
       res.json(data);
     });
   });
-<<<<<<< HEAD
-};
-=======
 
   //Will be the new event one
   app.post('/newevent', function(req, res){
@@ -38,4 +35,3 @@ module.exports = function(app) {
   })
 
 };
->>>>>>> 8f8ad84a77c8e91d28e1bc0c7cf62429d6bf2e4e
