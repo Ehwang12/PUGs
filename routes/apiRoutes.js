@@ -1,24 +1,19 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+  var connection = require('../config')
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  module.exports = function(app) {
+    
+  //this route will be for when they hit submit on the splash page and are then redirected to the home page
+  app.get('/home', function(res, req){
+    res.sendFile(path.join(__dirname,''))
   });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
+  
+  //this route will post new user information into the database
+  app.post('/user/post', function(req, res){
+    var newUser = req.body;
+    connection.query('INSERT INTO ')
+    
   });
 };
