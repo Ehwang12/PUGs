@@ -31,7 +31,7 @@
 <body class="mx-auto">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-12 mt-3">
                 <!-- Material form contact -->
                 <div class="card">
 
@@ -85,8 +85,8 @@
                                     <option value="20">WOODBURY</option>
                                 </select>
                             </div>
-                            <div class="md-form col-12 mt-5">
-                                <button class="btn btn-info btn-rounded btn-block z-depth-0 my-4 waves-effect waves-light"
+                            <div class="md-form col-12 m-0">
+                                <button id="goBtn" class="btn btn-default btn-lg btn-rounded z-depth-0 my-4 waves-effect waves-light"
                                     type="submit">Go!</button>
                             </div>
                             <!-- Send button -->
@@ -95,54 +95,71 @@
                     </div>
                 </div>
             </div>
+            <span class="col-12 text-right">
+              <button class="btn-floating btn-lg btn-default animated pulse infinite" id="helpBtn" data-toggle="modal" data-target="#exampleModalPreview"><i class="fas fa-info"></i></button></span>
         </div>
     </div>
-      <!--Modal: modalRelatedContent-->
-      <div class="modal fade right" id="modalRelatedContent" tabindex="-1" role="dialog"
-        aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="false">
-        <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
-          <!--Content-->
-          <div class="modal-content">
-            <!--Header-->
-            <div class="modal-header">
-              <p class="heading">Related article</p>
-      
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" class="white-text">&times;</span>
-              </button>
-            </div>
-      
-            <!--Body-->
-            <div class="modal-body">
-      
-              <div class="row">
-                <div class="col-5">
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(55).jpg"
-                    class="img-fluid" alt="">
-                </div>
-      
-                <div class="col-7">
-                  <p><strong>My travel to paradise</strong></p>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit [...]</p>
-                  <button type="button" class="btn btn-info btn-md">Read more</button>
-      
-                </div>
-              </div>
-            </div>
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fluid modal-full-height modal-right" role="document">
+    <div class="modal-content">
+      <div class="modal-header teal accent-4 white-text">
+        <h5 class="modal-title h4 font-weight-bold" id="exampleModalPreviewLabel">What is PUGS?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pb-0">
+        <div class="row">
+          <div class="col-12 text-center m-2">
+            <img src="./img/basketball-108622_1920.jpg" class="waves-effect waves-light" width="80%" alt="" srcset="">
+            <hr>
           </div>
-          <!--/.Content-->
+      
+          <div class="col-12 text-monospace font-italic font-small ">
+              <p>PUGS is an application for spontaneously finding Pick Up Games of all kinds in your area! PUGS links users together to form teams for indoor and outdoor sports, table-top games, video-games and more.</p>
+              <hr>
+          </div>
+
+          <div class="col">
+            <h5 class="font-weight-bold">How it works</h5>
+              <p>PUG events only last for 24 hours.</p>
+              <p>Users enter their name and email and are given a unique ID to create or join a PUG.</p>
+              <p>Once a PUG is created, the user is not able to delete their event. However, Users are able to remove themselves from a PUG at any time.</p>
+          </div>
+
+          <div class="col-12">
+            <h5>Examples</h5>
+            <hr>
+          </div>
+        
+              <div class="col-12 text-center">
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-basketball-ball"></i> Basketball</li>
+                  <li><i class="fas fa-football-ball"></i> Football</li>
+                  <li><i class="fas fa-futbol"></i> Soccer</li>
+                  <li><i class="fas fa-table-tennis"></i> Tennis</li>
+                  <li><i class="fas fa-table-tennis"></i> Table-Tennis</li>
+                  <li><i class="fas fa-golf-ball"></i> Golf</li>
+                  <li><i class="fas fa-volleyball-ball"></i> Volleyball</li>
+                  <li><i class="fas fa-quidditch"></i> Quidditch</li>
+                  <li><i class="fas fa-gamepad"></i> Team Video-Games</li>
+                  <li><i class="fas fa-chess"></i> Chess</li>
+                  <li> & Much More!</li>
+                </ul>
+                <p class="text-muted font-small text-monospace font-weight-lighter current m-0">*Currently, PUGS is limited to the Minnesota Area.</p>
+          </div>
         </div>
       </div>
-      <!--Modal: modalRelatedContent-->
+      <div class="modal-footer text-center">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
 
-    <footer class="footer">
-        <div class="container">
-         
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalRelatedContent">Launch
-                    modal</button>
-
-        </div>
-    </footer>
 
     <!-- SCRIPTS -->
     <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js"></script>
