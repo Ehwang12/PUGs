@@ -153,7 +153,7 @@ h4{
 } */
 
 .container {
-  max-width: 500px!important;
+  max-width: 650px!important;
   line-height:1.5;
 }
 
@@ -207,15 +207,15 @@ input#materialContactFormName {
   background: white;
 }
 
-.col-sm-12.md-form.mt-4.text-left.animated.fadeInRight.delay-1s {
+/* .col-sm-12.md-form.mt-4.text-left.animated.fadeInRight.delay-1s {
   margin: 0;
   padding: 0 .5em 2em .5em;
   padding-left: 1em;
-}
+} */
 /* Class Selectors End --------*/
 
 label {
-  padding-left: 10px;
+  padding-left: 1.5em;
 }
 
 /**************** main feed *********************/
