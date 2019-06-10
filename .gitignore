@@ -19,7 +19,8 @@ e58b3e0 25 days ago
 
 # Ignore Mac DS_Store files
 .DS_Store
-    
++.DS_Store
+
 # Logs
 logs
 *.log
