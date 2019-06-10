@@ -9,8 +9,17 @@ body {
   margin-bottom: 60px;
   /* Margin bottom by footer height */
   line-height: 1.5;
+  font-family: "Raleway";
+  font-style: normal;
 }
 
+i {
+  font-style: normal!important;
+}
+
+body, html {
+  height: 100%;
+}
 a:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
   background: #b5bdc8;
@@ -29,7 +38,24 @@ a:hover {
 }
 
 label {
-  padding-left: 10px;
+  padding-left: 1.5em;
+}
+
+input[type=text]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label
+ {
+  color:black!important;
+
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=email]:focus:not([readonly])
+ {
+
+  -webkit-box-shadow:none!important;
+-moz-box-shadow: none!important;
+box-shadow: 0 1px 0 0 rgba(41, 41, 41, 0.596)!important;
+/* border-bottom:1px solid black!important; */
 }
 
 input.select-dropdown {
@@ -41,19 +67,22 @@ input.select-dropdown {
 /* ID Selectors */
 /* ----------------------------------------------------*/
 #goBtn {
-  width: 15em;
+  width: 8em;
+  font-size: large;
+  padding: .6em;
 }
-
 #helpBtn {
   top: -3em;
   right: -1em;
+  background: black;
+  font-style: normal!important;
 }
 /* ID Selectors End -------*/
 
 /* Class Selectors */
 /* ----------------------------------------------------*/
 .container {
-  max-width: 500px !important;
+  max-width: 650px !important;
   line-height: 1.5;
 }
 
@@ -138,20 +167,44 @@ input.select-dropdown {
   font-weight: 900;
 }
 
-body, html {
-  height: 100%;
-}
 .bg {
   /* The image used */
-  background-image: url("https://images.pexels.com/photos/264258/pexels-photo-264258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/69773/uss-nimitz-basketball-silhouettes-sea-69773.jpeg?cs=srgb&dl=basketball-game-ocean-69773.jpg&fm=jpg");
 
   /* Half height */
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+.goForm{
+  font-size: 1em;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+input#materialContactFormEmail {
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  background: white;
+}
+
+input#materialContactFormName {
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  background: white;
+}
+
+.col-sm-12.md-form.mt-4.text-left.animated.fadeInRight.delay-1s {
+  margin: 0;
+  padding: 0 .5em 2em .5em;
+  padding-left: 1em;
 }
 /* Class Selectors End --------*/
 

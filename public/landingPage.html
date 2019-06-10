@@ -30,7 +30,7 @@
 
 </div>
 <body class="view bg mx-auto">
-  <div class="mask rgba-stylish-strong">
+  <div class="mask rgba-teal-light">
     <div class="container">
       <!-- Begin Card Row -->
       <div class="row">
@@ -49,22 +49,22 @@
             <div class="card-body px-lg-5 pt-0">
 
               <!-- Form -->
-              <form class="text-center" style="color: #757575;">
+              <form class="text-center row" style="color: #757575;">
 
                 <!-- Name -->
-                <div class="md-form mt-3 animated fadeInRight delay-1s">
-                  <input type="text" id="materialContactFormName" class="form-control">
+                <div class="col-sm-12 md-form mt-4 mb-1 animated fadeInRight delay-1s">
+                  <input type="text" id="materialContactFormName" class="form-control pl-1">
                   <label for="materialContactFormName">Name</label>
                 </div>
 
                 <!-- E-mail -->
-                <div class="md-form animated fadeInRight delay-1s">
-                  <input type="email" id="materialContactFormEmail" class="form-control">
+                <div class="col-sm-12 mb-1 md-form animated fadeInRight delay-1s">
+                  <input type="email" id="materialContactFormEmail" class="form-control pl-1">
                   <label for="materialContactFormEmail">E-mail</label>
                 </div>
 
                 <!-- Location -->
-                <div class="md-form mt-3 text-left animated fadeInRight delay-1s">
+                <div class="col-sm-12 md-form text-left animated fadeInRight delay-1s">
                   <select class="browser-default custom-select">
                     <option selected>Location</option>
                     <option value="1">APPLE VALLEY</option>
@@ -90,9 +90,9 @@
                   </select>
                 </div>
                 <!-- Send button -->
-                <div class="md-form col-12 m-0 animated fadeInLeft delay-1s">
-                  <button id="goBtn" class="btn btn-default btn-lg btn-rounded z-depth-0 my-4 waves-effect waves-light"
-                    type="submit">Go!
+                <div class="goForm md-form col-12 m-0 animated fadeInLeft delay-1s">
+                  <button id="goBtn" class="btn btn-default btn-lg z-depth-0  waves-effect waves-light"
+                    type="submit">GO <i class="fas fa-angle-double-right"></i>
                   </button>
                 </div>
               </form>
@@ -102,7 +102,7 @@
         </div>
         <!-- Button trigger modal -->
         <span class="col-12 text-right animated fadeInUp delay-1s">
-          <button class="btn-floating btn-lg btn-default animated pulse infinite" id="helpBtn" data-toggle="modal"
+          <button class="btn-floating animated pulse infinite" id="helpBtn" data-toggle="modal"
             data-target="#exampleModalPreview"><i class="fas fa-info"></i></button></span>
       </div>
     </div>
@@ -173,7 +173,11 @@
     </div>
     <!-- Modal -->
   </div>
-
+  <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js"></script>
   <!-- Bootstrap tooltips -->
