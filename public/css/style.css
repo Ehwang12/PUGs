@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+/* YOUR CUSTOM STYLES */
+
+h1, h2, h3, h4, h5, h6{
+  font-size:small;
+  color: #3a3a3a;
+}
+
+
+body{
+  font-family: 'Corben', cursive!important;
+  background-image: url('../img/greyzz.png');
+
+}
+
+/* h2{
+  color: #3a3a3a;
+} */
+
+.main_content{
+  height:100vh;
+}
+.bg {
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+=======
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -25,6 +57,7 @@ body {
 .current{
   font-variant-caps: all-petite-caps;
 }
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 
 >>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
   .form-gradient .font-small {
@@ -102,12 +135,19 @@ h4{
 
   font-weight: 900;
 } */
+<<<<<<< HEAD
+=======
+
+.container {
+  max-width: 900px!important;
+>>>>>>> 59438ae74596eecdc8e610279f971d0a8fa9091e
 =======
 
 >>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 
 .container {
   max-width: 500px!important;
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
   line-height:1.5;
 }
 
@@ -134,8 +174,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
   color:white;
  font-weight: 900!important;
 
+<<<<<<< HEAD
+=======
 }
 
 label {
   padding-left: 10px;
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 }
