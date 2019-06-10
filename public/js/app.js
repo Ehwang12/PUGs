@@ -26,4 +26,10 @@ $(document).ready(function () {
     $("#myModal").modal();
   });
 
+// Create event button click event handler
+  $("#createEvent-btn").click(function(){
+    
+  });
+
+
 });
