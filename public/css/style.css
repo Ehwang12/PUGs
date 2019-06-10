@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-/* YOUR CUSTOM STYLES */
-
-h1, h2, h3, h4, h5, h6{
-  font-size:small;
-  color: #3a3a3a;
-}
-
-
-body{
-  font-family: 'Corben', cursive!important;
-  background-image: url('../img/greyzz.png');
-
-}
-
-/* h2{
-  color: #3a3a3a;
-} */
-
-.main_content{
-  height:100vh;
-}
-.bg {
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-=======
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -52,7 +20,6 @@ body {
 .current{
   font-variant-caps: all-petite-caps;
 }
->>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 
   .form-gradient .font-small {
     font-size: 0.8rem; }
@@ -87,11 +54,6 @@ body {
 
 }
 
-<<<<<<< HEAD
-.sendBtn{
-  width:50%;
-  margin: 0 auto;
-=======
 #goBtn{
   width:15em;
 }
@@ -102,7 +64,6 @@ body {
 }
 .tab{
   text-indent:30px
->>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 }
 
 input.select-dropdown {
@@ -110,34 +71,14 @@ input.select-dropdown {
   font-size: smaller;
 }
 
-<<<<<<< HEAD
-/* h5{
-  color:black;
-}
-h4{
-  color: lightslategray;
-} */
-=======
->>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 .dropdown-content li>a, .dropdown-content li>span {
   color: grey;
   font-size: smaller;
 }
-<<<<<<< HEAD
-/* h1.h1.text-center.text-white.text-bold.mx-auto {
-  font-variant: all-small-caps;
-
-  font-weight: 900;
-} */
-
-.container {
-  max-width: 900px!important;
-=======
 
 
 .container {
   max-width: 500px!important;
->>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
   line-height:1.5;
 }
 
@@ -164,11 +105,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', end
   color:white;
  font-weight: 900!important;
 
-<<<<<<< HEAD
-=======
 }
 
 label {
   padding-left: 10px;
->>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 }
