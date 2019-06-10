@@ -126,18 +126,9 @@ input.select-dropdown {
   box-shadow: 0 1px 0 0 #fd9267;
 }
 
-.form-gradient input[type=text]:focus:not([readonly])+label {
-  color: #4f4f4f;
-}
-
-.form-gradient input[type=password]:focus:not([readonly]) {
-  border-bottom: 1px solid #fd9267;
-  -webkit-box-shadow: 0 1px 0 0 #fd9267;
-  box-shadow: 0 1px 0 0 #fd9267;
-}
-
-.form-gradient input[type=password]:focus:not([readonly])+label {
-  color: #4f4f4f;
+.sendBtn{
+  width:50%;
+  margin: 0 auto;
 }
   /* Form Styles End -------*/
 
@@ -145,13 +136,28 @@ input.select-dropdown {
   text-indent: 30px
 }
 
-.dropdown-content li>a,
-.dropdown-content li>span {
+/* h5{
+  color:black;
+}
+h4{
+  color: lightslategray;
+} */
+.dropdown-content li>a, .dropdown-content li>span {
   color: grey;
   font-size: smaller;
 }
+/* h1.h1.text-center.text-white.text-bold.mx-auto {
+  font-variant: all-small-caps;
 
-.bg-new {
+  font-weight: 900;
+} */
+
+.container {
+  max-width: 500px!important;
+  line-height:1.5;
+}
+
+.bg-new{
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ce9c9c+0,cc9684+45,cc5d39+100 */
   background: #ce9c9c;
   /* Old browsers */
@@ -208,6 +214,50 @@ input#materialContactFormName {
 }
 /* Class Selectors End --------*/
 
-/* .view{
-  z-index: -1000;
-} */
+label {
+  padding-left: 10px;
+}
+
+/**************** main feed *********************/
+body, html {
+  height: 100%;
+}
+
+#userCard {
+  margin-left: 5%;
+  margin-top:5%;
+}
+
+.card-up {
+  background-image: url(../img/olga-guryanova-167262-unsplash.jpg);
+  background-position-y: 20%;
+  background-position-x: 50%;
+}
+
+#myPugs {
+  margin-left: 5%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+#weatherWidget {
+ margin-top: 2%;
+ margin-left:22%;
+}
+
+#weatherWidget > .list-group-horizontal {
+  flex-direction: row;
+  display: flex;
+}
+
+#feedDiv {
+  margin-top: -15%;
+  margin-left: 20%;
+}
+
+.bg-main {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

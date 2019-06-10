@@ -1,7 +1,20 @@
 module.exports = function(sequelize, DataTypes) {
-  var db = sequelize.define("pug_db", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+  var user = sequelize.define("user", {
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    city: DataTypes.STRING
   });
-  return db;
+
+  var pickUpGame = sequelize.define("pickUpGame", {
+    name: DataTypes.STRING,
+    category: DataTypes.STRING,
+    address: DataTypes.STRING,
+    StartTime: DataTypes.TIME,
+    city: DataTypes.STRING
+  });
+
+  user.belongsTo(pickUpGame);
+  pickUpGame.hasMany(user);
+
+  return user, pickUpGame;
 };
