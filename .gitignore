@@ -118,9 +118,12 @@ Training
 Blog
 About
 
+<<<<<<< HEAD
 
 # Sass
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+=======
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
