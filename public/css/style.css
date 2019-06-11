@@ -19,6 +19,8 @@ i {
 
 body, html {
   height: 100%;
+  margin: 0 auto;
+
 }
 a:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
@@ -214,6 +216,7 @@ input#materialContactFormName {
 body, html {
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
 }
 
 .bg-main {
@@ -294,6 +297,10 @@ body, html {
   border-radius:1em!important;
 }
 
+a.btn.btn-primary.waves-effect:hover {
+  /* color: black; */
+  background: royalblue;
+}
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
