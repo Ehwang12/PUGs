@@ -18,14 +18,15 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <div class="tempting-azure-gradient bg-main">
-  <div class="container-fluid" id="mainContain">
+<body class="tempting-azure-gradient">
   
+  <div class="container-fluid" id="mainContain">
+ 
   <!-- Card -->
   <div class="row" id="rowIndent">
-    <div class="col-4">
-      <div class="card testimonial-card" id="userCard">
+
+    <div class="col-4 col-sm-4 float-md-left">
+      <div class="card testimonial-card text-center" id="userCard">
 
         <!-- Background color -->
         <div class="card-up"></div>
@@ -46,30 +47,36 @@
     </div>
     <!-- /card -->
 
+  <div class="col-8">
     <!-- Weather Widget -->
     <div class="row">
       <div class="col-12" id="weatherWidget">
-          <ul class="list-group list-group-horizontal">
+          <ul class="list-group list-group-horizontal float-md-left">
             <li class="list-group-item">Weather Today: xx/xx/xx </li>
             <li class="list-group-item">High: 79&#176; </li>
             <li class="list-group-item">Low: 56&#176; </li>
           </ul>
       </div>
+    </div>
+    <!-- /weather widget -->
 
     <!-- Feed Div -->
+    <div class="row">
     <div class="col-12">
         <div class="card" id="feedDiv">
-          <ul class="list-group list-group-flush">
+          <ul class="list-group list-group-flush float-md-left">
             <li class="list-group-item">Test Event 1</li>
             <li class="list-group-item">Test Event 2</li>
             <li class="list-group-item">Test Event 3</li>
           </ul>
         </div>
     </div>
-    <!-- /Feed Div -->
     </div>
-    <!-- /weather widget -->
+    <!-- /Feed Div -->
+
   </div>
+  <!-- column-6 -->
+</div>
   <!-- /Card -->
     
   <!-- My Pugs Card -->  
@@ -104,8 +111,7 @@
  
     <!-- container div -->
     </div>
-  <!-- bg div -->
-  </div>
+  
 
   
 
