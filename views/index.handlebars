@@ -1,33 +1,52 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<div class="container" style="background-color: rgb(66, 70, 70)" style="margin: 20px">
+  <div class="jumbotron">
+    <h1>PUGs Events Page</h1>
   </div>
+
+  <div class="row">
+    <div class="col-md-1">
+
+
+    </div>
+    <div class="col-md-3">
+     
+
+<div class="card" style="background-color: rgb(177, 248, 224)" >  
+  <img class="card-img-top" alt="Image" width="100" src="200pug.jpg">
+  <div class="card-body" >
+    <h5 class="card-title">User Name: Jeff</h5>
+    <h6 class="card-subtitle mb-2 text-muted">PUGs hosted: 5</h6>
+    <h6 class="card-subtitle mb-2 text-muted">PUGs attended: 10</h6>
+</div>
+    </div>
+</div>
+<div class="col-md-2">
+
+
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+    <div class="col-md-5">
+    
+{{#each events}}
+<div class="card" style="background-color: rgb(140, 247, 211)" style="padding-bottom: 20px" >
+  <div class="card-body">
+    <img class="card-img-right" width="200" alt="Image" src="200pug.jpg">
+    <h5 class="card-title">Event Name: {{this.eventName}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Category: {{this.category}}</h6>
+    <p class="card-text">Description of event.</p>
+    <p class="card-text">Address: {{this.eventAddress}}</p>
+    <p class="card-text">Start Time: {{this.startTime}} End Time: {{this.endTime}}</p>
+    <a href="#" class="card-link">Update Event</a>
+    <a href="#" class="card-link">Message Event Host</a>
+  </div>
+</div>
+{{/each}}
+    </div>
+
+</div>
+
+<footer style="padding: 20px"></footer>
+
+
+</footer>
+
