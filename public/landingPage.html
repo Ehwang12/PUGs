@@ -48,24 +48,25 @@
             <!--Card content-->
             <div class="card-body px-lg-5 pt-0">
 
+                <!---->
               <!-- Form -->
-              <form class="text-center" style="color: #757575;">
+              <form action='/user/post' method='POST' class="text-center" style="color: #757575;">
 
                 <!-- Name -->
                 <div class="md-form mt-3 animated fadeInRight delay-1s">
-                  <input id='name' type="text" id="materialContactFormName" class="form-control">
-                  <label for="materialContactFormName">Name</label>
+                  <input id='name' name='name' type="text" class="form-control">
+                  <label for="name">Name</label>
                 </div>
 
                 <!-- E-mail -->
                 <div class="md-form animated fadeInRight delay-1s">
-                  <input id='email' type="email" id="materialContactFormEmail" class="form-control">
-                  <label for="materialContactFormEmail">E-mail</label>
+                  <input id='email' name='email' type="email" class="form-control">
+                  <label for="email">E-mail</label>
                 </div>
 
                 <!-- Location -->
                 <div class="md-form mt-3 text-left animated fadeInRight delay-1s">
-                  <select id='city' class="browser-default custom-select">
+                  <select id='city' name='city' class="browser-default custom-select">
                     <option selected>Location</option>
                     <option value="1">APPLE VALLEY</option>
                     <option value="2">BLAINE</option>
@@ -189,25 +190,23 @@
   <!-- Bootstrap tooltips -->
 
   <script>
-  $('#goBtn').on('click', function(event){
-    event.preventDefault();
-    var newUser = {
-      name: $('#name').val().trim(),
-      email: $('#email').val().trim(),
-      city: $('#city').val()
-    }
-
- //recording new users
-   $.post('/user/post', {
-      type: 'POST',
-      data: newUser
-    });
-    // .then(function(res){
-    // location.replace('/home');
-    // })
-
-
-});
+//   $('#goBtn').on('click', function(event){
+//     event.preventDefault();
+//     var newUser = {
+//       name: $('#name').val().trim(),
+//       email: $('#email').val().trim(),
+//       city: $('#city').val()
+//     }
+    
+//     //recording new users
+//     $.post('/user/post', {
+//       type: 'POST',
+//       data: newUser
+//     })
+//     .then(function(res){
+//       location.replace('/home');
+//     });
+// });
   
   </script>
 </body>
