@@ -58,10 +58,10 @@
           <!-- Feed Div -->
           <div class="col-12">
             <div class="card" id="feedDiv">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Test Event 1</li>
+              <ul id='allEvents' class="list-group list-group-flush">
+                <!-- <li class="list-group-item">Test Event 1</li>
                 <li class="list-group-item">Test Event 2</li>
-                <li class="list-group-item">Test Event 3</li>
+                <li class="list-group-item">Test Event 3</li> -->
               </ul>
             </div>
           </div>
@@ -204,21 +204,46 @@
 
   <script type="text/javascript" src="./js/app.js"></script>
   <script>
-     $('#goTime').on('click', function(event){
-         event.preventDefault();
-         var newEvent = {
-             name: $('#materialContactFormName').val().trim(),
-             city: $('#event_Loc').val().trim(),
-             StartTime: $('#event_Time').val()
-         }
-        console.log(newEvent)
-          $.post('/newevent', {
-            type: 'POST',
-            data: newEvent
-         }).then(function(result){
-             console.log(result);
-         });
-     }) 
+      $(document).ready(function(){
+          $.get('/findall', {
+              type: 'GET'
+          }).then(function(result){
+      
+            for (let i=0; i<result.length; i++){
+                let events = $('<li>')
+                events.addClass("list-group-item row");
+                events.addClass("eventRendering");
+                let name = $('<p>');
+                name.addClass('col-4');
+                name.text(result[i].name);
+                let time = $('<p>');
+                time.addClass('col-4');
+                time.text(result[i].StartTime);
+                let city = $('<p>');
+                city.addClass('col-4');
+                city.text(result[i].city);
+                $('.eventRendering').append(time, city, name);
+                $("#allEvents").prepend(events); 
+                }
+          })
+          
+          $('#goTime').on('click', function(event){
+              event.preventDefault();
+              var newEvent = {
+                  name: $('#materialContactFormName').val().trim(),
+                  city: $('#event_Loc').val().trim(),
+                  StartTime: $('#event_Time').val()
+              }
+             console.log(newEvent)
+               $.post('/newevent', {
+                 type: 'POST',
+                 data: newEvent
+              }).then(function(result){
+                  console.log(result);
+                  location.reload();
+              });
+          }) 
+      })
   
   </script>
 </body>
