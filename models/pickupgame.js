@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       category: DataTypes.STRING,
       address: DataTypes.STRING,
       StartTime: DataTypes.TIME,
-      city: DataTypes.STRING
+      city: DataTypes.INTEGER
     });
   
 pickUpGame.associate = function(models) {
