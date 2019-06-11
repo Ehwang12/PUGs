@@ -8,7 +8,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname,"../public/user.html"))
   })
   
-  app.get('', function(req, res){
+  app.get('/new/user', function(req, res){
       db.User.findAll({
       limit: 1,
       order: [['createdAt', 'DESC']]
