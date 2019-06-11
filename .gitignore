@@ -16,7 +16,11 @@ gitignore/Node.gitignore
 e58b3e0 25 days ago
 @stuartpb @shiftkey @TennyZhuang @venatoria @ro31337 @melonmanchan @gouthamve @jucrouzet @cheddar @arcresu @kesoji @tejashah88 @sroberts @SimonSiefke @segayuu @Richienb @rgbkrk @rsolomo @peat @noinkling @ndelvalle @MikeRalphson @lmedson @shtr0m @kerimdzhanov @joreyaesh
 89 lines (63 sloc)  1.28 KB
-    
+
+# Ignore Mac DS_Store files
+.DS_Store
++.DS_Store
+
 # Logs
 logs
 *.log

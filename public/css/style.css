@@ -1,9 +1,69 @@
+/* Main Styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
 label {
   padding-left: 10px;
+=======
+body {
+  margin-bottom: 60px;
+  /* Margin bottom by footer height */
+  line-height: 1.5;
+  font-family: "Raleway";
+  font-style: normal;
+}
+
+i {
+  font-style: normal!important;
+}
+
+body, html {
+  height: 100%;
+}
+a:hover {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
+  background: #b5bdc8;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #b5bdc8 0%, #828c95 36%, #28343b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5bdc8', endColorstr='#28343b', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+  color: white;
+  font-weight: 900 !important;
+
+}
+
+label {
+  padding-left: 1.5em;
+}
+
+input[type=text]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label
+ {
+  color:black!important;
+
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=email]:focus:not([readonly])
+ {
+
+  -webkit-box-shadow:none!important;
+-moz-box-shadow: none!important;
+box-shadow: 0 1px 0 0 rgba(41, 41, 41, 0.596)!important;
+/* border-bottom:1px solid black!important; */
+>>>>>>> 5aba1c38ece4339ffb7d01747e9ba12100839238
 }
 
 input.select-dropdown {
@@ -15,6 +75,7 @@ input.select-dropdown {
 /* ID Selectors */
 /* ----------------------------------------------------*/
 #goBtn {
+<<<<<<< HEAD
   width: 15em;
 }
 
@@ -30,12 +91,28 @@ body {
   line-height:1.5;
 >>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
 =======
+=======
+  width: 8em;
+  font-size: large;
+  padding: .6em;
+}
+#helpBtn {
+  top: -3em;
+  right: -1em;
+  background: black;
+  font-style: normal!important;
+}
+>>>>>>> 5aba1c38ece4339ffb7d01747e9ba12100839238
 /* ID Selectors End -------*/
 
 /* Class Selectors */
 /* ----------------------------------------------------*/
 .container {
+<<<<<<< HEAD
   max-width: 500px !important;
+=======
+  max-width: 650px !important;
+>>>>>>> 5aba1c38ece4339ffb7d01747e9ba12100839238
   line-height: 1.5;
 }
 
@@ -45,7 +122,10 @@ body {
   background-attachment: fixed;
   background-size: cover;
 
+<<<<<<< HEAD
 >>>>>>> 4cdd2c6f315560a2f8868572d92779ef4c00327d
+=======
+>>>>>>> 5aba1c38ece4339ffb7d01747e9ba12100839238
 }
 
 .footer {
@@ -59,6 +139,7 @@ body {
   background-color: #f5f5f5;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -125,6 +206,11 @@ body {
     background-size: cover;
   }
 >>>>>>> 94f429302b8a83b1cc0afcc7b67d952b757cd8b5
+=======
+.current {
+  font-variant-caps: all-petite-caps;
+}
+>>>>>>> 5aba1c38ece4339ffb7d01747e9ba12100839238
 
 /* Form Styles */
 /* ----------------------------------------------------*/
@@ -199,7 +285,7 @@ h4{
 } */
 
 .container {
-  max-width: 500px!important;
+  max-width: 650px!important;
   line-height:1.5;
 }
 
@@ -219,26 +305,42 @@ h4{
   font-weight: 900;
 }
 
-body, html {
-  height: 100%;
-}
 .bg {
   /* The image used */
-  background-image: url("https://images.pexels.com/photos/264258/pexels-photo-264258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-image: url("https://images.pexels.com/photos/69773/uss-nimitz-basketball-silhouettes-sea-69773.jpeg?cs=srgb&dl=basketball-game-ocean-69773.jpg&fm=jpg");
 
   /* Half height */
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* Class Selectors End --------*/
 
-label {
-  padding-left: 10px;
+
+.goForm{
+  font-size: 1em;
 }
+
+.card {
+  background-color: rgba(255, 255, 255, 0.87);
+}
+
+input#materialContactFormEmail {
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  background: white;
+}
+
+input#materialContactFormName {
+  border: 1px solid #ced4da;
+  border-radius: .25em;
+  background: white;
+}
+
+
+/**************** main feed *********************/
 
 /**************** main/user feed *********************/
 body, html {
@@ -297,6 +399,33 @@ body, html {
   margin-bottom: 20%; 
 }
 
+
+.faList{
+  list-style: none;
+  padding: 0;
+}
+
+.icon::before {
+  font-size: .25em;
+  display: block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+}
+.falist1:before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 200;
+  content: "\f069";
+  padding-right: .5em;
+
+}
+
+.event-input{
+  border-radius:1em!important;
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 
@@ -310,4 +439,3 @@ body, html {
 
  /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { ... }
-
