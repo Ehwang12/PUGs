@@ -205,6 +205,7 @@
       data: newUser
     }).then(function(result){
       console.log(result);
+      localStorage.setItem('newUser', JSON.stringify(result))
       location.replace('/home');
     })
     
