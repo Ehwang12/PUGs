@@ -204,6 +204,8 @@
           $.post('/newevent', {
             type: 'POST',
             data: newEvent
+         }).then(function(result){
+             console.log(result);
          });
      }) 
   
