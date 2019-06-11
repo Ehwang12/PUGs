@@ -25,11 +25,16 @@ module.exports = function(app) {
 
   //this route will post new user information into the database
   app.post('/user/post', function(req, res){
-    console.log(req.body);
-    db.User.create(req.body)
+    let newUserDrilled = [];
+    Reflect.ownKeys(req.body).forEach(key => {
+      console.log(key + ':' + req.body[key]);
+      newUserDrilled.push(req.body[key]);
+    });
+    let newUserObject = {name: newUserDrilled[1], email: newUserDrilled[2], city: newUserDrilled[3]};
+    db.User.create(newUserObject)
     .then(function(result){
+      res.json(result);  
       console.log('completed upload');
-      res.redirect('/home');   
     })
   });
 
