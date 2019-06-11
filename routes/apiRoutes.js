@@ -8,16 +8,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname,"../public/user.html"))
   })
   
-  app.get('/new/user', function(req, res){
-      db.User.findAll({
-      limit: 1,
-      order: [['createdAt', 'DESC']]
-    })
-    .then(function(result, err){
-      res.json(result);
-    })
-  })
-      
   //this  will be the splash page route
   app.get('/', function(req, res){
     res.sendFile(path.join(__dirname,"../public/landingPage.html"))
@@ -53,4 +43,14 @@ module.exports = function(app) {
       res.json(dbFunEvent);
     });
   });
+<<<<<<< HEAD
 };
+=======
+
+  app.get('/findall', function(req, res){
+    db.pickUpGame.findAll({}).then(function(result){
+      res.json(result);
+      })
+  })
+};
+>>>>>>> 51ba6a0af49f45b8466c24b73bee3c924dfb461d
