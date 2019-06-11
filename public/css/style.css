@@ -209,9 +209,6 @@ input#materialContactFormName {
   background: white;
 }
 
-
-/**************** main feed *********************/
-
 /**************** main/user feed *********************/
 body, html {
   height: 100%;
@@ -224,10 +221,6 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-/* #mainContain {
-  margin-left: 10%;
-} */
 
 #rowIndent {
   margin-left: 10%;
@@ -266,10 +259,10 @@ body, html {
 }
 
 #copyRightCard {
-  margin-left: 10%; 
+  margin-left: 35%;
+  margin-right: 2%; 
   margin-bottom: 20%; 
 }
-
 
 .faList{
   list-style: none;
@@ -301,16 +294,187 @@ a.btn.btn-primary.waves-effect:hover {
   /* color: black; */
   background: royalblue;
 }
+
+/***************** Media Queries *******************/
+
 /* Extra small devices (portrait phones, less than 576px) */
-/* No media query since this is the default in Bootstrap */
+/* @media (min-width: 575px) { 
+  
+  #rowIndent {
+    margin-left: 2%;
+  }
 
- /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+  #userCard {
+    height: 95%;
+    width:260%;
+    margin-left: 40%;
+    margin-top:5%;
+    margin-bottom: 2%;
+    float: left;
+    font-size: 0.5em;
+  }
 
-}
+  #userCard > .card-body {
+    height:30%;
+  }
 
- /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { ... }
+  #weatherWidget {
+    width: 115%;
+    height: 50%;
+    margin-left: 10%;
+    margin-top: 2%;
+    float: left;
 
- /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { ... }
+  }
+
+  #feedDiv {
+    margin-top: 1%;
+    margin-left: -27%;
+    width: 103%;
+    float:left;
+  }
+
+  #myPugs {
+    width: 220%;
+    margin-left: 60%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #copyRightCard {
+    width: 220%; 
+    margin-bottom: 20%; 
+    margin-left: 10%;
+    float: left;
+  } 
+
+ } */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (min-width: 767px) {
+
+  #userCard {
+    width:80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top:5%;
+    margin-bottom: 2%;
+    float: none;
+    font-size: 2em;
+  }
+
+  #rowIndent {
+    margin-left: 2%;
+  }
+
+  #weatherWidget {
+    margin-top: 3%;
+    margin-left: 2%;
+  }
+
+  #feedDiv {
+    margin-top: 4%;
+    margin-left: 2%;
+    width: 70%;
+    }
+
+    #myPugs {
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+  
+    #copyRightCard {
+      width: 80%; 
+      margin-bottom: 20%; 
+      margin-left: 10%;
+      float: none;
+    } 
+
+ } */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (min-width: 991px) { */
+
+  /* #rowIndent {
+    margin-left: 5%;
+  }
+  
+  #userCard {
+    width:80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top:5%;
+    margin-bottom: 2%;
+    float: none;
+    font-size: 2em;
+  }
+
+  #weatherWidget {
+    margin-top: 3%;
+    margin-left: 5%;
+  }
+
+  #feedDiv {
+    margin-top: -30%;
+    margin-left: 5%;
+    width: 80%;
+  }
+
+  #myPugs {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #copyRightCard {
+    width: 80%; 
+    margin-bottom: 20%; 
+    margin-left: 10%;
+    float: none;
+  } 
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (min-width: 1199px) {
+
+  #userCard {
+    width:80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-top:5%;
+    margin-bottom: 2%;
+    float: none;
+    font-size: 2em;
+  }
+
+  #weatherWidget {
+    margin-top: 3%;
+    margin-left:2%;
+    float: none;
+  }
+
+  #feedDiv {
+    margin-top: -30%;
+    margin-left: 2%;
+    width: 90%;
+    float: none;
+  }
+
+  #myPugs {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #copyRightCard {
+    width: 80%; 
+    margin-bottom: 20%; 
+    margin-left: 10%;
+    float: none;
+  }  */
+
+ }
