@@ -46,9 +46,9 @@
             <!--Card content-->
             <div class="card-body px-lg-5 pt-0">
 
-                <!---->
+                <!--action='/user/post' method='POST'-->
               <!-- Form -->
-              <form action='/user/post' method='POST' class="text-center" style="color: #757575;">
+              <form  class="text-center" style="color: #757575;">
 
                 <!-- Name -->
                 <div class="md-form mt-3 animated fadeInRight delay-1s">
@@ -192,23 +192,23 @@
   <!-- Bootstrap tooltips -->
 
   <script>
-//   $('#goBtn').on('click', function(event){
-//     event.preventDefault();
-//     var newUser = {
-//       name: $('#name').val().trim(),
-//       email: $('#email').val().trim(),
-//       city: $('#city').val()
-//     }
+  $('#goBtn').on('click', function(event){
+    event.preventDefault();
+    let newUser = {
+      name: $('#name').val().trim(),
+      email: $('#email').val().trim(),
+      city: $('#city').val()
+    }
     
-//     //recording new users
-//     $.post('/user/post', {
-//       type: 'POST',
-//       data: newUser
-//     })
-//     .then(function(res){
-//       location.replace('/home');
-//     });
-// });
+    $.post('/user/post', {
+      type: 'POST',
+      data: newUser
+    }).then(function(result){
+      console.log(result);
+      location.replace('/home');
+    })
+    
+});
   
   </script>
 </body>
