@@ -91,9 +91,9 @@
                 </div>
                 <!-- Send button -->
                 <div class="md-form col-12 m-0 animated fadeInLeft delay-1s">
-                  <a href='/home'><button id="goBtn" class="btn btn-default btn-lg btn-rounded z-depth-0 my-4 waves-effect waves-light"
+                  <button id="goBtn" class="btn btn-default btn-lg btn-rounded z-depth-0 my-4 waves-effect waves-light"
                     type="submit">Go!
-                  </button></a>
+                  </button>
                 </div>
               </form>
               <!-- Form End -->
@@ -197,14 +197,16 @@
       city: $('#city').val()
     }
 
-    //first promsie will hit the openweather API and return the city
-    // $.get()
-
-    //second promise will send the body information to our server to record new users
-    $.post('/user/post', {
+ //recording new users
+   $.post('/user/post', {
       type: 'POST',
       data: newUser
     });
+    // .then(function(res){
+    // location.replace('/home');
+    // })
+
+
 });
   
   </script>
