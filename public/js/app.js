@@ -30,7 +30,4 @@ $(document).ready(function () {
     e.preventDefault();
     $("#modalEvent").modal();
   });
-
-
-
 });

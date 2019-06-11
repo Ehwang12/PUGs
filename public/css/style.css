@@ -214,9 +214,6 @@ input#materialContactFormName {
 } */
 /* Class Selectors End --------*/
 
-label {
-  padding-left: 1.5em;
-}
 
 /**************** main feed *********************/
 body, html {
@@ -260,4 +257,30 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.faList{
+  list-style: none;
+  padding: 0;
+}
+
+.icon::before {
+  font-size: .25em;
+  display: block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+
+}
+.falist1:before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 200;
+  content: "\f069";
+  padding-right: .5em;
+
+}
+
+.event-input{
+  border-radius:1em!important;
 }
