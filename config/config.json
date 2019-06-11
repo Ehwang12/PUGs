@@ -7,14 +7,21 @@
     "host": "localhost",
 =======
     "password": "root",
+<<<<<<< HEAD
     "database": "exampledb",
     "host": "localhost",
     "port": 8889,
 >>>>>>> 2787f8d785e9a879db003d526c007524f699b75a
+=======
+    "database": "pug_db",
+    "host": "127.0.0.1",
+    "port": 3306,
+>>>>>>> 219ac54ac5239f8e4eb2a10986287724938acb70
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "password": null,
     "database": "testdb",
@@ -29,9 +36,20 @@
     "logging": false,
     "port": 8889
 >>>>>>> 2787f8d785e9a879db003d526c007524f699b75a
+=======
+    "password": null,
+    "database": "pug_db",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+>>>>>>> 219ac54ac5239f8e4eb2a10986287724938acb70
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": null,
+    "database": "pug_db",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
   }
 }
