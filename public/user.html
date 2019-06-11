@@ -132,8 +132,8 @@
         </div>
   
         <hr>
-
-        <div class="form-group">
+        <!--action="/newevent" method="POST"-->
+        <div  class="form-group">
           <label for="materialContactFormName" class="pl-1">EVENT:</label>
           <input type="text" id="materialContactFormName" class="form-control pl-1 event-input">
 
@@ -183,7 +183,7 @@
   
       <!--Footer-->
       <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-primary waves-effect waves-light">Send
+        <a id='goTime' type="submit" class="btn btn-primary waves-effect waves-light">Send
           <i class="fa fa-paper-plane ml-1"></i>
         </a>
       </div>
@@ -203,6 +203,22 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
 
   <script type="text/javascript" src="./js/app.js"></script>
+  <script>
+     $('#goTime').on('click', function(event){
+         event.preventDefault();
+         var newEvent = {
+             name: $('#materialContactFormName').val().trim(),
+             city: $('#event_Loc').val().trim(),
+             StartTime: $('#event_Time').val()
+         }
+        console.log(newEvent)
+          $.post('/newevent', {
+            type: 'POST',
+            data: newEvent
+         });
+     }) 
+  
+  </script>
 </body>
 
 </html>
