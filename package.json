@@ -11,9 +11,17 @@
   },
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
+=======
+    "bootstrap": "^4.3.1",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jquery": "^3.4.1",
+>>>>>>> 2787f8d785e9a879db003d526c007524f699b75a
     "mysql2": "^1.6.4",
     "sequelize": "^4.41.2"
   },
