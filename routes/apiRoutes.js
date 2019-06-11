@@ -12,7 +12,7 @@ module.exports = function(app) {
   
   //this  will be the splash page route
   app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname,"public\landingPage.html"))
+    res.sendFile(path.join(__dirname,"../public/landingPage.html"))
   });
 
   //this route will post new user information into the database
@@ -30,11 +30,6 @@ module.exports = function(app) {
     db.pickUpGame.create(req.body).then(function(dbFunEvent){
       res.json(dbFunEvent);
     })
-    // connection.query('INSERT INTO pickUpGame (name, category, address, StartTime, city) VALUES (?, ?, ?, ?,?)', [newEvent.name, newEvent.category,
-    // newEvent.address, newEvent.StartTime, newEvent.city], function(err, data){
-    //   if (err) return res.json(500, err);
-    //   res.json(data);
-    // })
   })
 
 };
