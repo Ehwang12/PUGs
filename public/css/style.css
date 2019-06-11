@@ -207,21 +207,31 @@ input#materialContactFormName {
   background: white;
 }
 
-/* .col-sm-12.md-form.mt-4.text-left.animated.fadeInRight.delay-1s {
-  margin: 0;
-  padding: 0 .5em 2em .5em;
-  padding-left: 1em;
-} */
-/* Class Selectors End --------*/
-
 
 /**************** main feed *********************/
+
+/**************** main/user feed *********************/
 body, html {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bg-main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* #mainContain {
+  margin-left: 10%;
+} */
+
+#rowIndent {
+  margin-left: 10%;
 }
 
 #userCard {
-  margin-left: 5%;
+  margin-left: 10%;
   margin-top:5%;
 }
 
@@ -232,14 +242,14 @@ body, html {
 }
 
 #myPugs {
-  margin-left: 5%;
+  margin-left: 10%;
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
 #weatherWidget {
  margin-top: 2%;
- margin-left:22%;
+ margin-left:10%;
 }
 
 #weatherWidget > .list-group-horizontal {
@@ -249,15 +259,14 @@ body, html {
 
 #feedDiv {
   margin-top: -15%;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
-.bg-main {
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+#copyRightCard {
+  margin-left: 10%; 
+  margin-bottom: 20%; 
 }
+
 
 .faList{
   list-style: none;
@@ -284,3 +293,17 @@ body, html {
 .event-input{
   border-radius:1em!important;
 }
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query since this is the default in Bootstrap */
+
+ /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+ /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { ... }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { ... }

@@ -30,4 +30,10 @@ $(document).ready(function () {
     e.preventDefault();
     $("#modalEvent").modal();
   });
+
+// Create event button click event handler
+  $("#createEvent-btn").click(function(){
+    
+  });
+
 });

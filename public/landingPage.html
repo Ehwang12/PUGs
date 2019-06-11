@@ -189,6 +189,29 @@
 
   <script type="text/javascript" src="./js/app.js"></script>
   <!-- Bootstrap tooltips -->
+
+  <script>
+  $('#goBtn').on('click', function(event){
+    event.preventDefault();
+    var newUser = {
+      name: $('#name').val().trim(),
+      email: $('#email').val().trim(),
+      city: $('#city').val()
+    }
+
+ //recording new users
+   $.post('/user/post', {
+      type: 'POST',
+      data: newUser
+    });
+    // .then(function(res){
+    // location.replace('/home');
+    // })
+
+
+});
+  
+  </script>
 </body>
 
 
