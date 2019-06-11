@@ -4,10 +4,14 @@ var path = require('path');
 module.exports = function(app) {
     
   //this route will be for when they hit submit on the splash page and are then redirected to the home page
-  app.get('/home/:', function(req, res){
+  app.get('/home', function(req, res){
+    //   db.User.findAll({
+    //   limit: 1,
+    //   order: [['createdAt', 'DESC']]
+    // })
     res.sendFile(path.join(__dirname,"../public/user.html"))
-  });
-  
+  })
+      
   //this  will be the splash page route
   app.get('/', function(req, res){
     res.sendFile(path.join(__dirname,"../public/landingPage.html"))

@@ -9,8 +9,6 @@
 
   <link href="./css/fontawesome-all.min.css" rel="stylesheet">
 
-  <link href="./css/fontawesome.min.css" rel="stylesheet">
-
   <!-- Bootstrap core CSS -->
   <link href="./css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,12 +23,12 @@
   <link href="https://fonts.googleapis.com/css?family=Corben&display=swap" rel="stylesheet">
 
   <!-- JQuery -->
-  <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 </head>
 
 </div>
 <body class="view bg mx-auto">
-  <div class="mask rgba-stylish-strong">
+  <div class="mask rgba-teal-light">
     <div class="container">
       <!-- Begin Card Row -->
       <div class="row">
@@ -50,6 +48,7 @@
 
                 <!---->
               <!-- Form -->
+<<<<<<< HEAD
               <form action='/user/post' method='POST' class="text-center" style="color: #757575;">
 
                 <!-- Name -->
@@ -67,6 +66,25 @@
                 <!-- Location -->
                 <div class="md-form mt-3 text-left animated fadeInRight delay-1s">
                   <select id='city' name='city' class="browser-default custom-select">
+=======
+              <form class="text-center row" style="color: #757575;">
+
+                <!-- Name -->
+                <div class="col-sm-12 md-form mt-4 mb-1 animated fadeInRight delay-1s">
+                  <input type="text" id="materialContactFormName" class="form-control pl-1">
+                  <label for="materialContactFormName">Name</label>
+                </div>
+
+                <!-- E-mail -->
+                <div class="col-sm-12 mb-1 md-form animated fadeInRight delay-1s">
+                  <input type="email" id="materialContactFormEmail" class="form-control pl-1">
+                  <label for="materialContactFormEmail">E-mail</label>
+                </div>
+
+                <!-- Location -->
+                <div class="col-sm-12 md-form text-left animated fadeInRight delay-1s">
+                  <select class="browser-default custom-select">
+>>>>>>> 030b0bd2ce19c5aba8049e6db49c022aa9da3650
                     <option selected>Location</option>
                     <option value="1">APPLE VALLEY</option>
                     <option value="2">BLAINE</option>
@@ -91,9 +109,9 @@
                   </select>
                 </div>
                 <!-- Send button -->
-                <div class="md-form col-12 m-0 animated fadeInLeft delay-1s">
-                  <button id="goBtn" class="btn btn-default btn-lg btn-rounded z-depth-0 my-4 waves-effect waves-light"
-                    type="submit">Go!
+                <div class="goForm md-form col-12 m-0 animated fadeInLeft delay-1s">
+                  <button id="goBtn" class="btn btn-default btn-lg z-depth-0  waves-effect waves-light"
+                    type="submit">GO <i class="fas fa-angle-double-right"></i>
                   </button>
                 </div>
               </form>
@@ -103,7 +121,7 @@
         </div>
         <!-- Button trigger modal -->
         <span class="col-12 text-right animated fadeInUp delay-1s">
-          <button class="btn-floating btn-lg btn-default animated pulse infinite" id="helpBtn" data-toggle="modal"
+          <button class="btn-floating animated pulse infinite" id="helpBtn" data-toggle="modal"
             data-target="#exampleModalPreview"><i class="fas fa-info"></i></button></span>
       </div>
     </div>
@@ -124,21 +142,21 @@
           <div class="modal-body pb-0">
             <div class="row">
               <div class="col-12 text-center m-2">
-                <img src="./img/basketball-108622_1920.jpg" class="waves-effect waves-light" width="80%" alt="" srcset="">
+                <img src="./img/tim-mossholder-660383-unsplash.jpg" class="waves-effect waves-light mx-auto" width="80%" alt="" srcset="">
                 <hr>
               </div>
 
               <div class="col-12 text-monospace font-italic font-small ">
-                <p>PUGS is an application for spontaneously finding Pick Up Games of all kinds in your area! PUGS links
-                  users together to form teams for indoor and outdoor sports, table-top games, video-games and more.</p>
+                <p>PUGS is an application for spontaneously finding Pick Up Games in your area!</p> <p>PUGS allows
+                  users to quickly form teams for indoor and outdoor sports, table-top games, video-games & more.</p>
                 <hr>
               </div>
 
               <div class="col">
                 <h5 class="font-weight-bold">How it works</h5>
-                <p>PUG events only last for 24 hours.</p>
-                <p>Users enter their name and email and are given a unique ID to create or join a PUG.</p>
-                <p>Once a PUG is created, the user is not able to delete their event. However, Users are able to remove
+                <p class="falist1">PUG events only last for 24 hours.</p>
+                <p class="falist1">Users enter their name and email and are given a unique ID to create or join a PUG.</p>
+                <p class="falist1">Once a PUG is created, the user is not able to delete their event. However, Users are able to remove
                   themselves from a PUG at any time.</p>
               </div>
 
@@ -174,7 +192,11 @@
     </div>
     <!-- Modal -->
   </div>
-
+  <footer class="footer d-none">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
   <!-- SCRIPTS -->
   <script src="https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js"></script>
   <!-- Bootstrap tooltips -->
