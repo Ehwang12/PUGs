@@ -36,7 +36,15 @@ module.exports = function(app) {
   //Will be the new event one
   app.post('/newevent', function(req, res){
     // var newEvent = req.body;
-    db.pickUpGame.create(req.body).then(function(dbFunEvent){
+    let newEventDrilled = [];
+    Reflect.ownKeys(req.body).forEach(key => {
+      console.log(key + ':' + req.body[key]);
+      newEventDrilled.push(req.body[key]);
+    });
+    console.log(newEventDrilled);
+    let newEventObject = {name: newEventDrilled[1], city:  newEventDrilled[2], StartTime: newEventDrilled[3]};
+    db.pickUpGame.create(newEventObject).then(function(dbFunEvent){
+      console.log('Event Created');
       res.json(dbFunEvent);
     });
   });
