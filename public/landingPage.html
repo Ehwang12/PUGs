@@ -32,9 +32,6 @@
 <body class="view bg mx-auto">
   <div class="mask rgba-stylish-strong">
     <div class="container">
-
-
-                <!-- Material form contact -->
       <!-- Begin Card Row -->
       <div class="row">
         <div class="col-12 mt-3">
@@ -91,7 +88,6 @@
                     <option value="20">ST. PAUL</option>
                     <option value="20">WOODBURY</option>
                   </select>
-
                 </div>
                 <!-- Send button -->
                 <div class="md-form col-12 m-0 animated fadeInLeft delay-1s">
@@ -127,7 +123,7 @@
           <div class="modal-body pb-0">
             <div class="row">
               <div class="col-12 text-center m-2">
-              <!--  <img src="./img/basketball-108622_1920.jpg" class="waves-effect waves-light" width="80%" alt="" srcset="">-->
+                <img src="./img/basketball-108622_1920.jpg" class="waves-effect waves-light" width="80%" alt="" srcset="">
                 <hr>
               </div>
 
@@ -200,7 +196,6 @@
       email: $('#email').val().trim(),
       city: $('#city').val()
     }
-
  //recording new users
    $.post('/user/post', {
       type: 'POST',
@@ -209,8 +204,6 @@
     // .then(function(res){
     // location.replace('/home');
     // })
-
-
 });
   
   </script>

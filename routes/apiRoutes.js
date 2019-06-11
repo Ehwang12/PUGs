@@ -28,13 +28,6 @@ module.exports = function(app) {
 
     db.pickUpGame.create(req.body).then(function(dbFunEvent){
       res.json(dbFunEvent);
-<<<<<<< HEAD
-    })
-  })
-
-};
-=======
     });
   });
 };
->>>>>>> 469120addc153dbcbc10310704fbb05569ae14b7

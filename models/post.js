@@ -5,17 +5,14 @@ module.exports = function(sequelize, DataTypes) {
     city: DataTypes.STRING
   });
 
-  var pickUpGame = sequelize.define("pickUpGame", {
-    name: DataTypes.STRING,
-    category: DataTypes.STRING,
-    address: DataTypes.STRING,
-    StartTime: DataTypes.TIME,
-    city: DataTypes.STRING
-  });
 
+User.associate = function(models) {
   User.belongsTo(pickUpGame);
-  pickUpGame.hasMany(User);
+}
+  
 
-  return User, pickUpGame;
+  return User;
 };
+
+
 
