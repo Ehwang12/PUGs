@@ -246,31 +246,6 @@
       $(document).ready(function(){
           $.get('/findall', function(data){
               type: 'GET'
-<<<<<<< HEAD
-          }).then(function(result){
-          for (let i=0; i<result.length; i++){
-              console.log(result)
-              console.log(result[i].name)
-                let events = $('<div>')
-                events.addClass("list-group-item row");
-                events.addClass("eventRendering");
-                let name = $('<p>');
-              
-                name.text(result[i].name);
-                let time = $('<p>');
-               
-                time.text(result[i].StartTime);
-                let city = $('<p>');
-                
-                city.text(result[i].city);
-                $('.eventRendering').append(name, time, city);
-                $("#allEvents").prepend(events);
-                
-                }
-                
-         });
-          
-=======
               events = data; 
               initializeEvents(events);
           })
@@ -315,7 +290,6 @@
             return event; 
         }
 
->>>>>>> 8a09d33fb4832d5daccc2b533b469baf9643ece6
           $('#goTime').on('click', function(event){
               event.preventDefault();
               var newEvent = {
