@@ -1,8 +1,17 @@
+
 $(document).ready(function(){
-    var location = "Minneapolis";
+    let aValue = localStorage.getItem('newUser');
+    let location= aValue.split(',')[3].split(':')[1].replace(/['"]+/g, '');
+    console.log(location);
+    // console.log(location.split('"')[1]);
+    if (aValue === undefined){
+        location = "Minneapolis";
+    }
+    var cityName;
     var emptyArr = [];
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" +
         location + ",USA&APPID=d1fe11bbbd89325017da7da0cffc0c2b&units=imperial";
+    
         $.getJSON(queryURL,function(result){
             console.log( JSON.stringify(result, null, 2));
             var mainWeather = result.weather;
@@ -10,11 +19,8 @@ $(document).ready(function(){
             var highTemp = result.main.temp_max;
             var lowTemp = result.main.temp_min;
             var desc = result.weather[0].description;
-            console.log(desc)
 
             var icon= mainWeather[0].icon;
-            console.log(icon);
-            console.log(currentTemp + "°F")
 
             for (let i=0; i < mainWeather.length; i++){
                 var weatherDiv = $("#weatherListDiv");
@@ -27,10 +33,6 @@ $(document).ready(function(){
            $("#currentTemp").html('<div class="col-md-4 align-self-center">' + currentTemp + '°F' + '</div><div class="col-md-4 align-self-center">' + desc + '</div><div class="col-md-4 align-self-center"><img class="weatherIcon d-inline right w-80" src="https://openweathermap.org/img/w/' + icon + '.png"></div>');
 
         weatherDiv.html('<div class="row"><div class="h4 temp col-6 align-self-center"> High: ' + highTemp + '°F' + '</div><div class="col-6 align-self-center h4 temp"> Low: '+ lowTemp + '°F' +'</div></div>');
-            // append('<li class="weatherLi list-group-item"></li>');
-            
-            // weatherDiv.append('<li class="weatherLi list-group-item">Desc: ' + weatherDesc + '</li>');
-
             
     
       
