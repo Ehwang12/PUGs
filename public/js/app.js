@@ -31,3 +31,5 @@ $(document).ready(function () {
     $("#modalEvent").modal();
   });
 
+});
+

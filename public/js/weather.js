@@ -24,9 +24,9 @@ $(document).ready(function(){
                 var weatherDiv = $("#weatherListDiv");
                 emptyArr.push(mainWeather[i].main);
             }                
-           $("#currentTemp").html('<div class="col-md-4 align-self-center h1">' + currentTemp + '°F' + '</div><div class="col-md-4 h1 d-block white rounded heavy-rain-gradient black-text mb-1">'+ cityname + '</div><div class="col-md-4 align-self-center desc p-0">' + desc + '</div>');
+           $("#currentTemp").html('<div class="col-md-3 align-self-center h1">' + currentTemp + '°F' + '</div><div class="city col-md-6 h1 align-self-center white-text rounded mb-1 p-0">'+ cityname + '</div><div class="col-md-3 align-self-center desc p-0">' + desc + '</div>');
 
-        weatherDiv.html('<div class="row"><div class="h4 temp col-md-4 align-self-center"> High: ' + highTemp + '°F' + '</div><div class="col-md-4 align-self-center"><img class="animated pulse infinite weatherIcon d-inline right w-80" width="60px" src="https://openweathermap.org/img/w/' + icon + '.png"></div><div class="col-md-4 align-self-center h4 temp"> Low: '+ lowTemp + '°F' +'</div></div>');
+        weatherDiv.html('<div class="row"><div class="h4 temp col-md-4 align-self-center"><i class="fal fa-temperature-high fa-sm"></i> High:<br> ' + highTemp + '°F' + '</div><div class="col-md-4 align-self-center"><img class="animated pulse infinite weatherIcon d-inline right w-80" width="60px" src="https://openweathermap.org/img/w/' + icon + '.png"></div><div class="col-md-4 align-self-center h4 temp"><i class="fal fa-temperature-low fa-sm"></i>Low:<br> '+ lowTemp + '°F' +'</div></div>');
             
     
       

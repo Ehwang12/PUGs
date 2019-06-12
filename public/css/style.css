@@ -216,6 +216,10 @@ input#materialContactFormName {
   font-weight: bold;
 }
 
+.city {
+    line-height: .9;
+}
+
 #axu {
   font-family: 'Josefin Sans', sans-serif;
   font-variant: all-petite-caps;
