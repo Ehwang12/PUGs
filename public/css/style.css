@@ -204,6 +204,20 @@ body, html {
   background-position-x: 50%;
 }
 
+.cardbg{
+  /* background-image: url(https://media.giphy.com/media/rQN1XopdwVsIg/giphy.gif); */
+  background-size: cover;
+}
+
+.eventDiv {
+  margin-top: -9em;
+}
+
+#axu {
+  font-family: 'Josefin Sans', sans-serif;
+  font-variant: all-petite-caps;
+}
+
 #myPugs {
   margin-left: 10%;
   margin-top: 10%;
