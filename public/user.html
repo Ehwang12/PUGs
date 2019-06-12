@@ -212,72 +212,76 @@
   <script type="text/javascript" src="./js/app.js"></script>
   <script type="text/javascript" src="./js/weather.js"></script>
   <script>
-    var allEvents = $('#allEvents');
-    var events;
-    $(document).ready(function () {
-      $.get('/findall', function (data) {
-        type: 'GET'
-        events = data;
-        initializeEvents(events);
-      })
+      var allEvents = $('#allEvents');
+      var events;
+      $(document).ready(function(){
+          $.get('/findall', function(data){
+              type: 'GET'
+              events = data; 
+              initializeEvents(events);
+          })
 
 
-      function initializeEvents(events) {
-        allEvents.empty();
-        var eventsToAdd = [];
-        console.log(events);
-        for (let i = 0; i < events.length; i++) {
-          console.log(i);
-          eventsToAdd.push(createNewEvent(events[i]))
+        function initializeEvents(events){
+            allEvents.empty();
+            var eventsToAdd = [];
+            console.log(events);
+            for (let i=0; i<events.length; i++){
+                console.log(i);
+                eventsToAdd.push(createNewEvent(events[i]))
+            }
+            allEvents.prepend(eventsToAdd);
+            console.log(eventsToAdd);
+            }
+
+        function createNewEvent (events) {
+            let event = $('<div>');
+            let body = $('<div>');
+            let city = $('<p>');
+            let name = $('<p>');
+            let time = $('<p>');
+            let descript = $('<p>');
+            let btn = $('<button>')
+            event.addClass("card");
+            event.addClass("eventRendering");
+            body.addClass('card-body');
+            btn.attr('type', 'button');
+            btn.attr('event', events.name);
+            btn.addClass('join');
+            btn.addClass('btn btn-primary');
+            btn.text('Join');
+            descript.text(events.description);
+            time.text(events.StartTime);
+            name.text(events.name);
+            city.text(events.city);
+            body.append(name);
+            body.append(time);
+            body.append(city);
+            body.append(descript);
+            body.append(btn);
+            event.append(body);
+            return event; 
         }
-        allEvents.prepend(eventsToAdd);
-        console.log(eventsToAdd);
-      }
 
-      function createNewEvent(events) {
-        let event = $('<div>');
-        let body = $('<div>');
-        let city = $('<p>');
-        let name = $('<p>');
-        let time = $('<p>');
-        let btn = $('<button>')
-        event.addClass("card");
-        event.addClass("eventRendering");
-        body.addClass('card-body');
-        btn.attr('type', 'button');
-        btn.attr('id', 'join');
-        btn.text('Join');
-        name.addClass('col-4');
-        time.addClass('col-4');
-        city.addClass('col-4');
-        time.text(events.StartTime);
-        name.text(events.name);
-        city.text(events.city);
-        body.append(name);
-        body.append(time);
-        body.append(city);
-        body.append(btn)
-        event.append(body)
-        return event;
-      }
-
-      $('#goTime').on('click', function (event) {
-        event.preventDefault();
-        var newEvent = {
-          name: $('#materialContactFormName').val().trim(),
-          city: $('#event_Loc').val().trim(),
-          StartTime: $('#event_Time').val()
-        }
-        console.log(newEvent)
-        $.post('/newevent', {
-          type: 'POST',
-          data: newEvent
-        }).then(function (result) {
-          console.log(result);
-          location.reload();
-        });
+        $('#goTime').on('click', function(event){
+            event.preventDefault();
+            var newEvent = {
+                name: $('#materialContactFormName').val().trim(),
+                city: $('#event_Loc').val().trim(),
+                StartTime: $('#event_Time').val(),
+                description: $('#form79textarea').val().trim()
+            }
+            console.log(newEvent)
+            $.post('/newevent', {
+                type: 'POST',
+                data: newEvent
+            }).then(function(result){
+                console.log(result);
+                location.reload();
+            });
+        }) 
       })
-    })
+    
   </script>
 </body>
 
