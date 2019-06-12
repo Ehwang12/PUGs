@@ -1,15 +1,10 @@
 {
   "development": {
-<<<<<<< HEAD
     "username": "root",
     "password": "golf",
-=======
-    "username": "nodeuser",
-    "password": "nodeuser",
->>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
     "database": "pug_db",
     "host": "localhost",
-    "port": 8889,
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {

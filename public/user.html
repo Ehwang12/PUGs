@@ -90,20 +90,9 @@
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
-
-        <div class="col-md-6 offset-1 col-sm-12">
-          <div class="card" id="feedDiv">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Test Event 1</li>
-              <li class="list-group-item">Test Event 2</li>
-              <li class="list-group-item">Test Event 3</li>
-            </ul>
-=======
         <!-- Feed Div -->
         <div class="col-md-6 offset-1 eventDiv">
           <div class="card" id="allEvents">
->>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
           </div>
         </div>
         <!-- /Feed Div -->
@@ -270,17 +259,12 @@
             event.addClass("card");
             event.addClass("eventRendering");
             body.addClass('card-body');
-<<<<<<< HEAD
-            btn.attr("type", "button")
-            btn.attr('event', events.name);
-=======
             time.addClass('float-right');
             name.addClass('bold');
             city.addClass('bold');
             btn.attr('type', 'button');
             btn.attr('event', events.name);
             btn.attr('time', events.StartTime);
->>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
             btn.addClass('join');
             btn.addClass('btn btn-primary');
             btn.text('Join');
@@ -297,44 +281,6 @@
             return event; 
         }
 
-<<<<<<< HEAD
-          $('#goTime').on('click', function(event){
-              event.preventDefault();
-              var newEvent = {
-                  name: $('#materialContactFormName').val().trim(),
-                  city: $('#event_Loc').val().trim(),
-                  StartTime: $('#event_Time').val()
-              }
-             console.log(newEvent)
-               $.post('/newevent', {
-                 type: 'POST',
-                 data: newEvent
-              }).then(function(result){
-                  console.log(result);
-                  location.reload();
-              });
-          });
-
-          $(".join").on("click", function(event) {
-              event.preventDefault();
-              var storedValue = localStorage.getItem("email");
-              function store(){
-                var inputEmail= document.getElementById("email");
-                localStorage.setItem("email", inputEmail.value);
-                  }
-              //var event = $(this).attr("event");
-              //email = localStorage.getItem(split(',')[3].split(':')[1].replace(/['"]+/g, ''));
-              //var email = localStorage.getItem("email");
-              var inputEmail= document.getElementsByClassName("email");
-              localStorage.setItem("email", inputEmail.value);
-              console.log(storedValue)
-
-          })
-         
-        
-        })
-  
-=======
         $(document).on('click', '.join', function(event){
             var time = $(this).attr('time');
             var name = $(this).attr('event');
@@ -345,6 +291,10 @@
             myPug.text(name+' '+time);
             myPug.addClass('list-group')
             listPugs.append(myPug);
+
+            $.get('/sendmail/'+time+'/'+name, function(){
+              type: 'GET'              
+            })
         })
 
         $('#goTime').on('click', function(event){
@@ -366,7 +316,6 @@
         }) 
       })
     
->>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
   </script>
 </body>
 

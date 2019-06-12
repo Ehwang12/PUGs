@@ -55,16 +55,21 @@ module.exports = function(app) {
   })
 
 const sendmail = require('sendmail')();
- 
-sendmail({
-    from: 'sabrinaanhthong@gmail.com',
-    to: 'sabrinaanhthong@gmail.com ',
-    subject: 'Joined Event',
-    html: 'You are now added to the event! ',
-  }, function(err, reply) {
-    //console.log(err && err.stack);
-    console.dir(reply);
-});
+ app.get('/sendmail/:time/:name', function(req,res){
+   let time = req.params.time;
+   let name = req.params.name;
+   sendmail({
+       from: 'sabrinaanhthong@gmail.com',
+       to: 'sabrinaanhthong@gmail.com ',
+       subject: 'Joined Event: '+name,
+       html: 'You are now added to the event! it beigns at :' +time,
+     }, function(err, reply) {
+       //console.log(err && err.stack);
+       console.dir(reply);
+       console.log("There")
+   });
+
+ })
  }
 
 
