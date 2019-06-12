@@ -121,3 +121,21 @@ API
 Training
 Blog
 About
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+=======
+=======
+>>>>>>> 59438ae74596eecdc8e610279f971d0a8fa9091e
+>>>>>>> 8d7fa7f86ab1bd9860c9fe0de4a605c0b9bcf3a3
+=======
+>>>>>>> 4cdd2c6f315560a2f8868572d92779ef4c00327d

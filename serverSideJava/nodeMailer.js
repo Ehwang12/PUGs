@@ -1,20 +1,20 @@
-module.exports = function(){
+module.exports = function(userEmail){
 
 var nodemailer = require('nodemailer');
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-    user: 'youremail@gmail.com',
-    pass: 'yourpassword'
+    user: 'email@gmail.com',
+    pass: 'Password'
     }
 });
 
 var mailOptions = {
-    from: 'youremail@gmail.com',
-    to: 'myfriend@yahoo.com',
+    from: 'email@gmail.com',
+    to: 'useremail@gmail.com',
     subject: 'Sending Email using Node.js',
-    text: 'That was easy!'
+    text: 'You have joined the event!'
 };
 
 transporter.sendMail(mailOptions, function(error, info){
