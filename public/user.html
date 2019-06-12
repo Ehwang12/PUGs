@@ -14,15 +14,15 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
 
 </head>
 
-<body class="tempting-azure-gradient">
-  <div class="bg-main">
+<body>
+  <div class="bg-main tempting-azure-gradient">
     <div class="container-fluid">
-
       <!-- Card -->
       <div class="row">
         <div class="col-md-4 col-sm-12">
@@ -38,10 +38,12 @@
             </div>
 
             <!-- Content -->
-            <div class="card-body">
+            <div  class="card-body">
+                <div id='currentUser' class='text-center'>
+
+                </div>
               <!-- Name -->
-              <h4 class="card-title">Sporty McSportster</h4>
-              <button class="btn btn-primary" id="createEvent-btn" data-toggle="modal" data-target="#modalEvent">Create
+                <button class="btn btn-primary" id="createEvent-btn" data-toggle="modal" data-target="#modalEvent">Create
                 Event</button>
             </div>
 
@@ -52,26 +54,17 @@
         <!-- Weather Widget -->
 
         <div class="col-md-6 offset-1 mt-3 mb-5" id="axu">
-
           <div class="card card-cascade mb-5 p-0">
-
             <!-- Card image -->
-            <div class="view view-cascade gradient-card-header aqua-gradient pb-0 flex-row">
-
+            <div class="view view-cascade gradient-card-header heavy-rain-gradient  p-1 flex-row">
               <!-- Title -->
-              <h2 class="card-header-title mb-3" id="currentTemp">News Title</h2>
+              <h2 class="row card-header-title m-0" id="currentTemp">News Title</h2>
               <!-- Text -->
-
-
             </div>
-
             <!-- Card content -->
             <div class="card-body card-body-cascade text-center">
               <ul class="list-group list-group-horizontal containingGroup" id="weatherListDiv">
               </ul>
-
-
-
             </div>
             <!-- Card content -->
 
@@ -82,14 +75,9 @@
         </div>
 
         <!-- /weather widget -->
-        <!-- Feed Div -->
-        <div class="col-12">
-          <div class="card" id="allEvents">
-          </div>
-        </div>
-        <!-- /Feed Div -->
-    </div>
-    <!-- /Card -->
+
+      </div>
+      <!-- /Card -->
 
       <!-- My Pugs Card -->
       <div class="row">
@@ -98,13 +86,11 @@
             <div class="card-header text-center">
               My PUGS
             </div>
-            <ul class="list-group list-group-flush text-left">
-              <li class="list-group-item">Basketball @5pm</li>
-              <li class="list-group-item">Badminton @7pm</li>
-              <li class="list-group-item">Roller Hockey @8pm</li>
+            <ul id='listPugs' class="list-group list-group-flush text-left">
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
 
         <div class="col-md-6 offset-1 col-sm-12">
           <div class="card" id="feedDiv">
@@ -113,23 +99,17 @@
               <li class="list-group-item">Test Event 2</li>
               <li class="list-group-item">Test Event 3</li>
             </ul>
+=======
+        <!-- Feed Div -->
+        <div class="col-md-6 offset-1 eventDiv">
+          <div class="card" id="allEvents">
+>>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
           </div>
         </div>
+        <!-- /Feed Div -->
       </div>
       <!-- /My Pugs Card -->
-
-      <!-- Copyright Card
-      <div class="row">
-        <div class="col-5 text-center">
-          <div class="card" id="copyRightCard">
-            <div class="card-body">
-              <p class="card-title">2019 &#169; Pick Up Games!</p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- container div -->
+      <!-- Copyright Card -->
       <div class="row">
         <div class="col-md-4 ml-4 text-center">
           <div class="card" id="copyRightCard">
@@ -138,7 +118,9 @@
             </div>
           </div>
         </div>
+
       </div>
+    <!-- container div -->
     </div>
     <!-- bg div -->
   </div>
@@ -237,19 +219,33 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-
+  
   <script type="text/javascript" src="./js/app.js"></script>
   <script type="text/javascript" src="./js/weather.js"></script>
   <script>
+      let aValue = localStorage.getItem('newUser');
+      let currentUser = aValue.split(',')[1].split(':')[1].replace(/['"]+/g, '');
+      var nameOfUser = $('#currentUser');
+      console.log(currentUser);
       var allEvents = $('#allEvents');
+      var listPugs = $('#listPugs');
       var events;
       $(document).ready(function(){
           $.get('/findall', function(data){
               type: 'GET'
               events = data; 
               initializeEvents(events);
-          })
-
+            })
+            
+        function userName () {
+            let name = $('<h4>');
+                name.addClass('card-title');
+                name.addClass('text-center');
+                name.text(currentUser);
+                nameOfUser.append(name);
+            }
+                
+            userName();
 
         function initializeEvents(events){
             allEvents.empty();
@@ -267,31 +263,41 @@
             let event = $('<div>');
             let body = $('<div>');
             let city = $('<p>');
-            let name = $('<p>');
+            let name = $('<h4>');
             let time = $('<p>');
+            let descript = $('<p>');
             let btn = $('<button>')
             event.addClass("card");
             event.addClass("eventRendering");
             body.addClass('card-body');
+<<<<<<< HEAD
             btn.attr("type", "button")
             btn.attr('event', events.name);
+=======
+            time.addClass('float-right');
+            name.addClass('bold');
+            city.addClass('bold');
+            btn.attr('type', 'button');
+            btn.attr('event', events.name);
+            btn.attr('time', events.StartTime);
+>>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
             btn.addClass('join');
             btn.addClass('btn btn-primary');
             btn.text('Join');
-            name.addClass('col-4');
-            time.addClass('col-4');
-            city.addClass('col-4');
+            descript.text(events.description);
             time.text(events.StartTime);
             name.text(events.name);
             city.text(events.city);
             body.append(name);
             body.append(time);
             body.append(city);
-            body.append(btn)
-            event.append(body)
+            body.append(descript);
+            body.append(btn);
+            event.append(body);
             return event; 
         }
 
+<<<<<<< HEAD
           $('#goTime').on('click', function(event){
               event.preventDefault();
               var newEvent = {
@@ -328,6 +334,39 @@
         
         })
   
+=======
+        $(document).on('click', '.join', function(event){
+            var time = $(this).attr('time');
+            var name = $(this).attr('event');
+
+            console.log(event);
+
+            let myPug = $('<li>');
+            myPug.text(name+' '+time);
+            myPug.addClass('list-group')
+            listPugs.append(myPug);
+        })
+
+        $('#goTime').on('click', function(event){
+            event.preventDefault();
+            var newEvent = {
+                name: $('#materialContactFormName').val().trim(),
+                city: $('#event_Loc').val().trim(),
+                StartTime: $('#event_Time').val(),
+                description: $('#form79textarea').val().trim()
+            }
+            console.log(newEvent)
+            $.post('/newevent', {
+                type: 'POST',
+                data: newEvent
+            }).then(function(result){
+                console.log(result);
+                location.reload();
+            });
+        }) 
+      })
+    
+>>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
   </script>
 </body>
 
