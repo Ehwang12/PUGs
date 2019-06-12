@@ -24,7 +24,7 @@ $(document).ready(function(){
             }    
             var weatherDesc = emptyArr.join('/');
             
-           $("#currentTemp").html('<div class="row"><div class="col-md-6 align-self-center">' + currentTemp + '°F' + '</div><div class="col-md-3 align-self-center">' + desc + '</div><div class="col-md-3 align-self-center"><img class="weatherIcon d-inline right w-80" src="https://openweathermap.org/img/w/' + icon + '.png"></div></div>');
+           $("#currentTemp").html('<div class="col-md-4 align-self-center">' + currentTemp + '°F' + '</div><div class="col-md-4 align-self-center">' + desc + '</div><div class="col-md-4 align-self-center"><img class="weatherIcon d-inline right w-80" src="https://openweathermap.org/img/w/' + icon + '.png"></div>');
 
         weatherDiv.html('<div class="row"><div class="h4 temp col-6 align-self-center"> High: ' + highTemp + '°F' + '</div><div class="col-6 align-self-center h4 temp"> Low: '+ lowTemp + '°F' +'</div></div>');
             // append('<li class="weatherLi list-group-item"></li>');
