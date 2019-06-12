@@ -220,6 +220,21 @@ input#materialContactFormName {
     line-height: .9;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgrey!important;
+font-style: italic!important;
+  
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgrey!important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lightgrey!important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: lightgrey!important;
+}
+
 #axu {
   font-family: 'Josefin Sans', sans-serif;
   font-variant: all-petite-caps;
@@ -297,7 +312,7 @@ a.btn.btn-primary.waves-effect:hover {
 }
 
 .weatherIcon{
-  width:50px;
+  width:65px;
 }
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
@@ -305,3 +320,4 @@ a.btn.btn-primary.waves-effect:hover {
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
+}
