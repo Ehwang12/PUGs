@@ -264,24 +264,26 @@
             let city = $('<p>');
             let name = $('<p>');
             let time = $('<p>');
+            let descript = $('<p>');
             let btn = $('<button>')
             event.addClass("card");
             event.addClass("eventRendering");
             body.addClass('card-body');
             btn.attr('type', 'button');
-            btn.attr('id', 'join');
+            btn.attr('event', events.name);
+            btn.addClass('join');
+            btn.addClass('btn btn-primary');
             btn.text('Join');
-            name.addClass('col-4');
-            time.addClass('col-4');
-            city.addClass('col-4');
+            descript.text(events.description);
             time.text(events.StartTime);
             name.text(events.name);
             city.text(events.city);
             body.append(name);
             body.append(time);
             body.append(city);
-            body.append(btn)
-            event.append(body)
+            body.append(descript);
+            body.append(btn);
+            event.append(body);
             return event; 
         }
 
@@ -290,7 +292,8 @@
             var newEvent = {
                 name: $('#materialContactFormName').val().trim(),
                 city: $('#event_Loc').val().trim(),
-                StartTime: $('#event_Time').val()
+                StartTime: $('#event_Time').val(),
+                description: $('#form79textarea').val().trim()
             }
             console.log(newEvent)
             $.post('/newevent', {
