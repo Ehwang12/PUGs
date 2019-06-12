@@ -23,7 +23,6 @@
 <body class="tempting-azure-gradient">
   <div class="bg-main">
     <div class="container-fluid">
-
       <!-- Card -->
       <div class="row">
         <div class="col-md-4 col-sm-12">
@@ -53,26 +52,17 @@
         <!-- Weather Widget -->
 
         <div class="col-md-6 offset-1 mt-3 mb-5" id="axu">
-
           <div class="card card-cascade mb-5 p-0">
-
             <!-- Card image -->
             <div class="view view-cascade gradient-card-header heavy-rain-gradient  p-1 flex-row">
-
               <!-- Title -->
               <h2 class="row card-header-title m-0" id="currentTemp">News Title</h2>
               <!-- Text -->
-
-
             </div>
-
             <!-- Card content -->
             <div class="card-body card-body-cascade text-center">
               <ul class="list-group list-group-horizontal containingGroup" id="weatherListDiv">
               </ul>
-
-
-
             </div>
             <!-- Card content -->
 
@@ -83,14 +73,9 @@
         </div>
 
         <!-- /weather widget -->
-        <!-- Feed Div -->
-        <div class="col-12">
-          <div class="card" id="allEvents">
-          </div>
-        </div>
-        <!-- /Feed Div -->
-    </div>
-    <!-- /Card -->
+
+      </div>
+      <!-- /Card -->
 
       <!-- My Pugs Card -->
       <div class="row">
@@ -106,25 +91,14 @@
             </ul>
           </div>
         </div>
-
-        <div class="col-md-6 offset-1 col-sm-12">
+        <!-- Feed Div -->
+        <div class="col-md-6 offset-1 eventDiv">
           <div class="card" id="allEvents">
           </div>
         </div>
+        <!-- /Feed Div -->
       </div>
       <!-- /My Pugs Card -->
-
-      <!-- Copyright Card
-      <div class="row">
-        <div class="col-5 text-center">
-          <div class="card" id="copyRightCard">
-            <div class="card-body">
-              <p class="card-title">2019 &#169; Pick Up Games!</p>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
       <!-- container div -->
       <div class="row">
         <div class="col-md-4 ml-4 text-center">
@@ -134,6 +108,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
     <!-- bg div -->
@@ -237,73 +212,72 @@
   <script type="text/javascript" src="./js/app.js"></script>
   <script type="text/javascript" src="./js/weather.js"></script>
   <script>
-      var allEvents = $('#allEvents');
-      var events;
-      $(document).ready(function(){
-          $.get('/findall', function(data){
-              type: 'GET'
-              events = data; 
-              initializeEvents(events);
-          })
-
-
-        function initializeEvents(events){
-            allEvents.empty();
-            var eventsToAdd = [];
-            console.log(events);
-            for (let i=0; i<events.length; i++){
-                console.log(i);
-                eventsToAdd.push(createNewEvent(events[i]))
-            }
-            allEvents.prepend(eventsToAdd);
-            console.log(eventsToAdd);
-            }
-
-        function createNewEvent (events) {
-            let event = $('<div>');
-            let body = $('<div>');
-            let city = $('<p>');
-            let name = $('<p>');
-            let time = $('<p>');
-            let btn = $('<button>')
-            event.addClass("card");
-            event.addClass("eventRendering");
-            body.addClass('card-body');
-            btn.attr('type', 'button');
-            btn.attr('id', 'join');
-            btn.text('Join');
-            name.addClass('col-4');
-            time.addClass('col-4');
-            city.addClass('col-4');
-            time.text(events.StartTime);
-            name.text(events.name);
-            city.text(events.city);
-            body.append(name);
-            body.append(time);
-            body.append(city);
-            body.append(btn)
-            event.append(body)
-            return event; 
-        }
-
-        $('#goTime').on('click', function(event){
-            event.preventDefault();
-            var newEvent = {
-                name: $('#materialContactFormName').val().trim(),
-                city: $('#event_Loc').val().trim(),
-                StartTime: $('#event_Time').val()
-            }
-            console.log(newEvent)
-            $.post('/newevent', {
-                type: 'POST',
-                data: newEvent
-            }).then(function(result){
-                console.log(result);
-                location.reload();
-            });
-        }) 
+    var allEvents = $('#allEvents');
+    var events;
+    $(document).ready(function () {
+      $.get('/findall', function (data) {
+        type: 'GET'
+        events = data;
+        initializeEvents(events);
       })
-  
+
+
+      function initializeEvents(events) {
+        allEvents.empty();
+        var eventsToAdd = [];
+        console.log(events);
+        for (let i = 0; i < events.length; i++) {
+          console.log(i);
+          eventsToAdd.push(createNewEvent(events[i]))
+        }
+        allEvents.prepend(eventsToAdd);
+        console.log(eventsToAdd);
+      }
+
+      function createNewEvent(events) {
+        let event = $('<div>');
+        let body = $('<div>');
+        let city = $('<p>');
+        let name = $('<p>');
+        let time = $('<p>');
+        let btn = $('<button>')
+        event.addClass("card");
+        event.addClass("eventRendering");
+        body.addClass('card-body');
+        btn.attr('type', 'button');
+        btn.attr('id', 'join');
+        btn.text('Join');
+        name.addClass('col-4');
+        time.addClass('col-4');
+        city.addClass('col-4');
+        time.text(events.StartTime);
+        name.text(events.name);
+        city.text(events.city);
+        body.append(name);
+        body.append(time);
+        body.append(city);
+        body.append(btn)
+        event.append(body)
+        return event;
+      }
+
+      $('#goTime').on('click', function (event) {
+        event.preventDefault();
+        var newEvent = {
+          name: $('#materialContactFormName').val().trim(),
+          city: $('#event_Loc').val().trim(),
+          StartTime: $('#event_Time').val()
+        }
+        console.log(newEvent)
+        $.post('/newevent', {
+          type: 'POST',
+          data: newEvent
+        }).then(function (result) {
+          console.log(result);
+          location.reload();
+        });
+      })
+    })
   </script>
 </body>
 

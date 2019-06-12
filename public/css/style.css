@@ -209,6 +209,10 @@ body, html {
   background-size: cover;
 }
 
+.eventDiv {
+  margin-top: -9em;
+}
+
 #axu {
   font-family: 'Josefin Sans', sans-serif;
   font-variant: all-petite-caps;
