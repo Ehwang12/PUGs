@@ -38,10 +38,12 @@
             </div>
 
             <!-- Content -->
-            <div class="card-body">
+            <div  class="card-body">
+                <div id='currentUser' class='text-center'>
+
+                </div>
               <!-- Name -->
-              <h4 class="card-title">Sporty McSportster</h4>
-              <button class="btn btn-primary" id="createEvent-btn" data-toggle="modal" data-target="#modalEvent">Create
+                <button class="btn btn-primary" id="createEvent-btn" data-toggle="modal" data-target="#modalEvent">Create
                 Event</button>
             </div>
 
@@ -84,10 +86,7 @@
             <div class="card-header text-center">
               My PUGS
             </div>
-            <ul class="list-group list-group-flush text-left">
-              <li class="list-group-item">Basketball @5pm</li>
-              <li class="list-group-item">Badminton @7pm</li>
-              <li class="list-group-item">Roller Hockey @8pm</li>
+            <ul id='listPugs' class="list-group list-group-flush text-left">
             </ul>
           </div>
         </div>
@@ -208,19 +207,33 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
-
+  
   <script type="text/javascript" src="./js/app.js"></script>
   <script type="text/javascript" src="./js/weather.js"></script>
   <script>
+      let aValue = localStorage.getItem('newUser');
+      let currentUser = aValue.split(',')[1].split(':')[1].replace(/['"]+/g, '');
+      var nameOfUser = $('#currentUser');
+      console.log(currentUser);
       var allEvents = $('#allEvents');
+      var listPugs = $('#listPugs');
       var events;
       $(document).ready(function(){
           $.get('/findall', function(data){
               type: 'GET'
               events = data; 
               initializeEvents(events);
-          })
-
+            })
+            
+        function userName () {
+            let name = $('<h4>');
+                name.addClass('card-title');
+                name.addClass('text-center');
+                name.text(currentUser);
+                nameOfUser.append(name);
+            }
+                
+            userName();
 
         function initializeEvents(events){
             allEvents.empty();
@@ -247,6 +260,7 @@
             body.addClass('card-body');
             btn.attr('type', 'button');
             btn.attr('event', events.name);
+            btn.attr('time', events.StartTime);
             btn.addClass('join');
             btn.addClass('btn btn-primary');
             btn.text('Join');
@@ -262,6 +276,18 @@
             event.append(body);
             return event; 
         }
+
+        $(document).on('click', '.join', function(event){
+            var time = $(this).attr('time');
+            var name = $(this).attr('event');
+
+            console.log(event);
+
+            let myPug = $('<li>');
+            myPug.text(name+' '+time);
+            myPug.addClass('list-group')
+            listPugs.append(myPug);
+        })
 
         $('#goTime').on('click', function(event){
             event.preventDefault();
