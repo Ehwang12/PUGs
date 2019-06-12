@@ -112,6 +112,17 @@
       </div>
       <!-- /My Pugs Card -->
 
+      <!-- Copyright Card
+      <div class="row">
+        <div class="col-5 text-center">
+          <div class="card" id="copyRightCard">
+            <div class="card-body">
+              <p class="card-title">2019 &#169; Pick Up Games!</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
       <!-- container div -->
       <div class="row">
         <div class="col-md-4 ml-4 text-center">
@@ -223,6 +234,49 @@
 
   <script type="text/javascript" src="./js/app.js"></script>
   <script type="text/javascript" src="./js/weather.js"></script>
+  <script>
+      $(document).ready(function(){
+          $.get('/findall', {
+              type: 'GET'
+          }).then(function(result){
+      
+            for (let i=0; i<result.length; i++){
+                let events = $('<li>')
+                events.addClass("list-group-item row");
+                events.addClass("eventRendering");
+                let name = $('<p>');
+                name.addClass('col-4');
+                name.text(result[i].name);
+                let time = $('<p>');
+                time.addClass('col-4');
+                time.text(result[i].StartTime);
+                let city = $('<p>');
+                city.addClass('col-4');
+                city.text(result[i].city);
+                $('.eventRendering').append(time, city, name);
+                $("#allEvents").prepend(events); 
+                }
+          })
+          
+          $('#goTime').on('click', function(event){
+              event.preventDefault();
+              var newEvent = {
+                  name: $('#materialContactFormName').val().trim(),
+                  city: $('#event_Loc').val().trim(),
+                  StartTime: $('#event_Time').val()
+              }
+             console.log(newEvent)
+               $.post('/newevent', {
+                 type: 'POST',
+                 data: newEvent
+              }).then(function(result){
+                  console.log(result);
+                  location.reload();
+              });
+          }) 
+      })
+  
+  </script>
 </body>
 
 </html>

@@ -46,24 +46,25 @@
             <!--Card content-->
             <div class="card-body px-lg-5 pt-0">
 
+                <!--action='/user/post' method='POST'-->
               <!-- Form -->
-              <form class="text-center row" style="color: #757575;">
+              <form  class="text-center" style="color: #757575;">
 
                 <!-- Name -->
-                <div class="col-sm-12 md-form mt-4 mb-1 animated fadeInRight delay-1s">
-                  <input type="text" id="materialContactFormName" class="form-control pl-1">
-                  <label for="materialContactFormName">Name</label>
+                <div class="md-form mt-3 animated fadeInRight delay-1s">
+                  <input id='name' name='name' type="text" class="form-control">
+                  <label for="name">Name</label>
                 </div>
 
                 <!-- E-mail -->
-                <div class="col-sm-12 mb-1 md-form animated fadeInRight delay-1s">
-                  <input type="email" id="materialContactFormEmail" class="form-control pl-1">
-                  <label for="materialContactFormEmail">E-mail</label>
+                <div class="md-form animated fadeInRight delay-1s">
+                  <input id='email' name='email' type="email" class="form-control">
+                  <label for="email">E-mail</label>
                 </div>
 
                 <!-- Location -->
-                <div class="col-sm-12 md-form text-left animated fadeInRight delay-1s">
-                  <select class="browser-default custom-select">
+                <div class="md-form mt-3 text-left animated fadeInRight delay-1s">
+                  <select id='city' name='city' class="browser-default custom-select">
                     <option selected>Location</option>
                     <option value="1">APPLE VALLEY</option>
                     <option value="2">BLAINE</option>
@@ -193,22 +194,21 @@
   <script>
   $('#goBtn').on('click', function(event){
     event.preventDefault();
-    var newUser = {
+    let newUser = {
       name: $('#name').val().trim(),
       email: $('#email').val().trim(),
       city: $('#city').val()
     }
-
- //recording new users
-   $.post('/user/post', {
+    
+    $.post('/user/post', {
       type: 'POST',
       data: newUser
-    });
-    // .then(function(res){
-    // location.replace('/home');
-    // })
-
-
+    }).then(function(result){
+      console.log(result);
+      localStorage.setItem('newUser', JSON.stringify(result))
+      location.replace('/home');
+    })
+    
 });
   
   </script>
