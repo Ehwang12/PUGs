@@ -1,4 +1,4 @@
-module.exports = function(){
+module.exports = function(userEmail){
 
 var nodemailer = require('nodemailer');
 
@@ -14,7 +14,7 @@ var mailOptions = {
     from: 'email@gmail.com',
     to: 'useremail@gmail.com',
     subject: 'Sending Email using Node.js',
-    text: 'That was easy!'
+    text: 'You have joined the event!'
 };
 
 transporter.sendMail(mailOptions, function(error, info){

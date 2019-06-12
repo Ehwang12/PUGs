@@ -273,8 +273,10 @@
             event.addClass("card");
             event.addClass("eventRendering");
             body.addClass('card-body');
-            btn.attr('type', 'button');
-            btn.attr('id', 'join');
+            btn.attr("type", "button")
+            btn.attr('event', events.name);
+            btn.addClass('join');
+            btn.addClass('btn btn-primary');
             btn.text('Join');
             name.addClass('col-4');
             time.addClass('col-4');
@@ -307,9 +309,22 @@
               });
           });
 
-          $("#join").on("click", function(email) {
+          $(".join").on("click", function(event) {
               event.preventDefault();
+              var storedValue = localStorage.getItem("email");
+              function store(){
+                var inputEmail= document.getElementById("email");
+                localStorage.setItem("email", inputEmail.value);
+                  }
+              //var event = $(this).attr("event");
+              //email = localStorage.getItem(split(',')[3].split(':')[1].replace(/['"]+/g, ''));
+              //var email = localStorage.getItem("email");
+              var inputEmail= document.getElementsByClassName("email");
+              localStorage.setItem("email", inputEmail.value);
+              console.log(storedValue)
+
           })
+         
         
         })
   

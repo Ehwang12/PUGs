@@ -4,17 +4,17 @@ $(document).ready(function(){
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" +
         location + ",USA&APPID=d1fe11bbbd89325017da7da0cffc0c2b&units=imperial";
         $.getJSON(queryURL,function(result){
-            console.log( JSON.stringify(result, null, 2));
+            // console.log( JSON.stringify(result, null, 2));
             var mainWeather = result.weather;
             var currentTemp = result.main.temp;
             var highTemp = result.main.temp_max;
             var lowTemp = result.main.temp_min;
             var desc = result.weather[0].description;
-            console.log(desc)
+            // console.log(desc)
 
             var icon= mainWeather[0].icon;
-            console.log(icon);
-            console.log(currentTemp + "°F")
+            // console.log(icon);
+            // console.log(currentTemp + "°F")
 
             for (let i=0; i < mainWeather.length; i++){
                 var weatherDiv = $("#weatherListDiv");
