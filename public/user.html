@@ -208,24 +208,27 @@
           $.get('/findall', {
               type: 'GET'
           }).then(function(result){
-      
-            for (let i=0; i<result.length; i++){
-                let events = $('<li>')
+          for (let i=0; i<result.length; i++){
+              console.log(result)
+              console.log(result[i].name)
+                let events = $('<div>')
                 events.addClass("list-group-item row");
                 events.addClass("eventRendering");
                 let name = $('<p>');
-                name.addClass('col-4');
+              
                 name.text(result[i].name);
                 let time = $('<p>');
-                time.addClass('col-4');
+               
                 time.text(result[i].StartTime);
                 let city = $('<p>');
-                city.addClass('col-4');
+                
                 city.text(result[i].city);
-                $('.eventRendering').append(time, city, name);
-                $("#allEvents").prepend(events); 
+                $('.eventRendering').append(name, time, city);
+                $("#allEvents").prepend(events);
+                
                 }
-          })
+                
+         });
           
           $('#goTime').on('click', function(event){
               event.preventDefault();
@@ -242,8 +245,13 @@
                   console.log(result);
                   location.reload();
               });
-          }) 
-      })
+          });
+
+          $("#join").on("click", function(email) {
+              event.preventDefault();
+          })
+        
+        })
   
   </script>
 </body>

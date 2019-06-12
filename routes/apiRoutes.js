@@ -43,9 +43,6 @@ module.exports = function(app) {
       res.json(dbFunEvent);
     });
   });
-<<<<<<< HEAD
-};
-=======
 
   app.get('/findall', function(req, res){
     db.pickUpGame.findAll({}).then(function(result){
@@ -53,4 +50,3 @@ module.exports = function(app) {
       })
   })
 };
->>>>>>> 51ba6a0af49f45b8466c24b73bee3c924dfb461d
