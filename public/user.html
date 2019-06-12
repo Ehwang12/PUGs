@@ -214,7 +214,7 @@
 
         <!--Footer-->
         <div class="modal-footer justify-content-center">
-          <a type="button" class="btn btn-primary waves-effect waves-light">Send
+          <a type="button" id="goTime" class="btn btn-primary waves-effect waves-light">Send
             <i class="fa fa-paper-plane ml-1"></i>
           </a>
         </div>
@@ -285,22 +285,22 @@
             return event; 
         }
 
-          $('#goTime').on('click', function(event){
-              event.preventDefault();
-              var newEvent = {
-                  name: $('#materialContactFormName').val().trim(),
-                  city: $('#event_Loc').val().trim(),
-                  StartTime: $('#event_Time').val()
-              }
-             console.log(newEvent)
-               $.post('/newevent', {
-                 type: 'POST',
-                 data: newEvent
-              }).then(function(result){
-                  console.log(result);
-                  location.reload();
-              });
-          }) 
+        $('#goTime').on('click', function(event){
+            event.preventDefault();
+            var newEvent = {
+                name: $('#materialContactFormName').val().trim(),
+                city: $('#event_Loc').val().trim(),
+                StartTime: $('#event_Time').val()
+            }
+            console.log(newEvent)
+            $.post('/newevent', {
+                type: 'POST',
+                data: newEvent
+            }).then(function(result){
+                console.log(result);
+                location.reload();
+            });
+        }) 
       })
   
   </script>
