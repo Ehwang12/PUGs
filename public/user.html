@@ -14,6 +14,9 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Heebo&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="tempting-azure-gradient">
@@ -21,8 +24,8 @@
     <div class="container-fluid">
 
       <!-- Card -->
-      <div class="row" id="rowIndent">
-        <div class="col-4">
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
           <div class="card testimonial-card" id="userCard">
 
             <!-- Background color -->
@@ -38,7 +41,8 @@
             <div class="card-body">
               <!-- Name -->
               <h4 class="card-title">Sporty McSportster</h4>
-              <button class="btn btn-primary" id="createEvent-btn" data-toggle="modal" data-target="#modalEvent">Create Event</button>
+              <button class="btn btn-primary" id="createEvent-btn" data-toggle="modal" data-target="#modalEvent">Create
+                Event</button>
             </div>
 
           </div>
@@ -46,16 +50,37 @@
         <!-- /card -->
 
         <!-- Weather Widget -->
-        <div class="row">
-          <div class="col-12" id="weatherWidget">
-            <ul class="list-group list-group-horizontal">
-              <li class="list-group-item">Weather Today: xx/xx/xx </li>
-              <li class="list-group-item">High: 79&#176; </li>
-              <li class="list-group-item">Low: 56&#176; </li>
-            </ul>
+
+        <div class="col-md-6 offset-1 mt-3 mb-5" id="axu">
+
+          <div class="card card-cascade mb-5 p-0">
+
+            <!-- Card image -->
+            <div class="view view-cascade gradient-card-header aqua-gradient pb-0 flex-row">
+
+              <!-- Title -->
+              <h2 class="card-header-title mb-3" id="currentTemp">News Title</h2>
+              <!-- Text -->
+
+
+            </div>
+
+            <!-- Card content -->
+            <div class="card-body card-body-cascade text-center">
+              <ul class="list-group list-group-horizontal containingGroup" id="weatherListDiv">
+              </ul>
+
+
+
+            </div>
+            <!-- Card content -->
+
           </div>
+          <!-- <ul class="list-group list-group-horizontal containingGroup z-depth-1-half" id="weatherListDiv">
+          </ul> -->
 
         </div>
+
         <!-- /weather widget -->
         <!-- Feed Div -->
         <div class="col-12">
@@ -67,11 +92,11 @@
     <!-- /Card -->
 
       <!-- My Pugs Card -->
-      <div class="row" id="rowIndent">
-        <div class="col-4">
+      <div class="row">
+        <div class="col-md-4">
           <div class="card" id="myPugs">
             <div class="card-header text-center">
-              My PUGs
+              My PUGS
             </div>
             <ul class="list-group list-group-flush text-left">
               <li class="list-group-item">Basketball @5pm</li>
@@ -81,11 +106,19 @@
           </div>
         </div>
 
-
+        <div class="col-md-6 offset-1 col-sm-12">
+          <div class="card" id="feedDiv">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Test Event 1</li>
+              <li class="list-group-item">Test Event 2</li>
+              <li class="list-group-item">Test Event 3</li>
+            </ul>
+          </div>
+        </div>
       </div>
       <!-- /My Pugs Card -->
 
-      <!-- Copyright Card -->
+      <!-- Copyright Card
       <div class="row">
         <div class="col-5 text-center">
           <div class="card" id="copyRightCard">
@@ -94,9 +127,18 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- container div -->
+      <div class="row">
+        <div class="col-md-4 ml-4 text-center">
+          <div class="card" id="copyRightCard">
+            <div class="card-body">
+              <p class="card-title text-muted text-smaller text-small">2019 © Pick Up Games!</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- bg div -->
   </div>
@@ -104,43 +146,42 @@
   <!-- /page end-->
 
 
-<!-- Modal: modalPoll -->
+  <!-- Modal: modalPoll -->
 
 
-<div class="modal fade" id="modalEvent" tabindex="-1" role="dialog" aria-labelledby="modalEvent"
-  aria-hidden="true">
-  <div class="modal-dialog modal-notify modal-info" role="document">
-     <div class="modal-content">
-      <!--Header-->
-      <div class="modal-header aqua-gradient">
-        <p class="heading lead font-weight-bold">Create A PUG!
-        </p>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true" class="white-text">×</span>
-        </button>
-      </div>
-  
-      <!--Body-->
-      <div class="modal-body">
-        <div class="text-center">
-          <i class="far fa-calendar-plus fa-4x mb-3 animated rotateIn"></i>
+  <div class="modal fade" id="modalEvent" tabindex="-1" role="dialog" aria-labelledby="modalEvent" aria-hidden="true">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header aqua-gradient">
+          <p class="heading lead font-weight-bold">Create A PUG!
+          </p>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" class="white-text">×</span>
+          </button>
         </div>
-  
-        <hr>
-        <!--action="/newevent" method="POST"-->
-        <div  class="form-group">
-          <label for="materialContactFormName" class="pl-1">EVENT:</label>
-          <input type="text" id="materialContactFormName" class="form-control pl-1 event-input">
 
-        </div>
-        <!-- Radio -->
-        <div class="row">
+        <!--Body-->
+        <div class="modal-body">
+          <div class="text-center">
+            <i class="far fa-calendar-plus fa-4x mb-3 animated rotateIn"></i>
+          </div>
+
+          <hr>
+
+          <div class="form-group">
+            <label for="materialContactFormName" class="pl-1">EVENT:</label>
+            <input type="text" id="materialContactFormName" class="form-control pl-1 event-input">
+
+          </div>
+          <!-- Radio -->
+          <div class="row">
             <div class="form-group col-6">
-                <label for="event_Time" class="pl-1">EVENT TIME:</label>
-                <input class="form-control event-input" type="time" id="event_Time">
-              </div>
-                     <!-- Location -->
-              <div class="form-group col-6">
+              <label for="event_Time" class="pl-1">EVENT TIME:</label>
+              <input class="form-control event-input" type="time" id="event_Time">
+            </div>
+            <!-- Location -->
+            <div class="form-group col-6">
               <label for="event_Loc" class="pl-1">CITY/STATE:</label>
               <select class="browser-default custom-select event-input" id="event_Loc">
                 <option selected>Location</option>
@@ -165,26 +206,26 @@
                 <option value="ST. PAUL">ST. PAUL</option>
                 <option value="WOODBURY">WOODBURY</option>
               </select>
-              </div>
-        </div>
-        <!-- DateTime -->
-        <div class="form-group">
+            </div>
+          </div>
+          <!-- DateTime -->
+          <div class="form-group">
             <label for="form79textarea" class="pl-1">DESCRIPTION:</label>
-          <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
-         
+            <textarea type="text" id="form79textarea" class="md-textarea form-control" rows="3"></textarea>
+
+          </div>
+
         </div>
-  
-      </div>
-  
-      <!--Footer-->
-      <div class="modal-footer justify-content-center">
-        <a id='goTime' type="submit" class="btn btn-primary waves-effect waves-light">Send
-          <i class="fa fa-paper-plane ml-1"></i>
-        </a>
+
+        <!--Footer-->
+        <div class="modal-footer justify-content-center">
+          <a type="button" class="btn btn-primary waves-effect waves-light">Send
+            <i class="fa fa-paper-plane ml-1"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
   <!-- SCRIPTS -->
@@ -198,6 +239,7 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
 
   <script type="text/javascript" src="./js/app.js"></script>
+  <script type="text/javascript" src="./js/weather.js"></script>
   <script>
       var allEvents = $('#allEvents');
       var events;
