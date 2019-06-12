@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+margin: 0 auto;
   /* Margin bottom by footer height */
   line-height: 1.5;
   font-family: 'Heebo', sans-serif!important;
@@ -20,8 +20,8 @@ i {
 
 body, html {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
   margin: 0 auto;
-
 }
 a:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
@@ -177,11 +177,7 @@ input#materialContactFormName {
 }
 
 /**************** main/user feed *********************/
-body, html {
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  margin: 0 auto;
-}
+
 
 .bg-main {
   background-position: center;
@@ -211,6 +207,10 @@ body, html {
 
 .eventDiv {
   margin-top: -9em;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #axu {
@@ -298,186 +298,3 @@ a.btn.btn-primary.waves-effect:hover {
  /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
-/***************** Media Queries *******************/
-
-/* Extra small devices (portrait phones, less than 576px) */
-/* @media (min-width: 575px) { 
-  
-  #rowIndent {
-    margin-left: 2%;
-  }
-
-  #userCard {
-    height: 95%;
-    width:260%;
-    margin-left: 40%;
-    margin-top:5%;
-    margin-bottom: 2%;
-    float: left;
-    font-size: 0.5em;
-  }
-
-  #userCard > .card-body {
-    height:30%;
-  }
-
-  #weatherWidget {
-    width: 115%;
-    height: 50%;
-    margin-left: 10%;
-    margin-top: 2%;
-    float: left;
-
-  }
-
-  #feedDiv {
-    margin-top: 1%;
-    margin-left: -27%;
-    width: 103%;
-    float:left;
-  }
-
-  #myPugs {
-    width: 220%;
-    margin-left: 60%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
-
-  #copyRightCard {
-    width: 220%; 
-    margin-bottom: 20%; 
-    margin-left: 10%;
-    float: left;
-  } 
-
- } */
-
-/* Small devices (landscape phones, less than 768px) */
-/* @media (min-width: 767px) {
-
-  #userCard {
-    width:80%;
-    height: 100%;
-    margin-left: 10%;
-    margin-top:5%;
-    margin-bottom: 2%;
-    float: none;
-    font-size: 2em;
-  }
-
-  #rowIndent {
-    margin-left: 2%;
-  }
-
-  #weatherWidget {
-    margin-top: 3%;
-    margin-left: 2%;
-  }
-
-  #feedDiv {
-    margin-top: 4%;
-    margin-left: 2%;
-    width: 70%;
-    }
-
-    #myPugs {
-      width: 80%;
-      margin-left: 10%;
-      margin-top: 10%;
-      margin-bottom: 10%;
-    }
-  
-    #copyRightCard {
-      width: 80%; 
-      margin-bottom: 20%; 
-      margin-left: 10%;
-      float: none;
-    } 
-
- } */
-
-/* Medium devices (tablets, less than 992px) */
-/* @media (min-width: 991px) { */
-
-  /* #rowIndent {
-    margin-left: 5%;
-  }
-  
-  #userCard {
-    width:80%;
-    height: 100%;
-    margin-left: 10%;
-    margin-top:5%;
-    margin-bottom: 2%;
-    float: none;
-    font-size: 2em;
-  }
-
-  #weatherWidget {
-    margin-top: 3%;
-    margin-left: 5%;
-  }
-
-  #feedDiv {
-    margin-top: -30%;
-    margin-left: 5%;
-    width: 80%;
-  }
-
-  #myPugs {
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
-
-  #copyRightCard {
-    width: 80%; 
-    margin-bottom: 20%; 
-    margin-left: 10%;
-    float: none;
-  } 
-} */
-
-/* Large devices (desktops, less than 1200px) */
-/* @media (min-width: 1199px) {
-
-  #userCard {
-    width:80%;
-    height: 100%;
-    margin-left: 10%;
-    margin-top:5%;
-    margin-bottom: 2%;
-    float: none;
-    font-size: 2em;
-  }
-
-  #weatherWidget {
-    margin-top: 3%;
-    margin-left:2%;
-    float: none;
-  }
-
-  #feedDiv {
-    margin-top: -30%;
-    margin-left: 2%;
-    width: 90%;
-    float: none;
-  }
-
-  #myPugs {
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
-
-  #copyRightCard {
-    width: 80%; 
-    margin-bottom: 20%; 
-    margin-left: 10%;
-    float: none;
-  }  */
-
- }
