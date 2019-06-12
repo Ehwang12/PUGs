@@ -6,7 +6,7 @@ $(document).ready(function () {
         location = '55420';
     }
     var emptyArr = [];
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + location + ",us&APPID=d1fe11bbbd89325017da7da0cffc0c2b&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + location + ",us&APPID=d1fe11bbbd89325017da7da0cffc0c2b&units=imperial";
 
     //   $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip="+ locationZip + ",us&APPID=d1fe11bbbd89325017da7da0cffc0c2b",function(result)
 

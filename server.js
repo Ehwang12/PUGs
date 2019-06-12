@@ -3,6 +3,8 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var db = require("./models");
 
+console.log('keys: ' + process.env.SPOTIFY_ID);
+
 var app = express();
 var PORT = process.env.PORT || 3000;
 
