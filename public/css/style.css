@@ -281,6 +281,10 @@ a.btn.btn-primary.waves-effect:hover {
   /* color: black; */
   background: royalblue;
 }
+
+.weatherIcon{
+  width:50px;
+}
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */
 

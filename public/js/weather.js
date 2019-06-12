@@ -8,10 +8,10 @@ $(document).ready(function(){
             var mainWeather = result.weather;
             var currentTemp = result.main.temp;
             var highTemp = result.main.temp_max;
-            var highTempNew= JSON.stringify(highTemp,null,2) +  "°F";
+            var lowTemp = result.main.temp_min;
+
             var icon= mainWeather[0].icon;
             console.log(icon);
-            console.log(highTempNew);
             console.log(currentTemp + "°F")
 
             for (let i=0; i < mainWeather.length; i++){
@@ -22,12 +22,12 @@ $(document).ready(function(){
             }    
             var weatherDesc = emptyArr.join('/');
             
-           $("#currentTemp").html('<div class="row"><div class="col-6">' + currentTemp + '°F' + '</div><div class="col-6"><img class="left" src="https://openweathermap.org/img/w/' + icon + '.png"></div></div>');
-        //    $("#currentTemp").append();
+           $("#currentTemp").html('<div class="row"><div class="col-6 align-self-center">' + currentTemp + '°F' + '</div><div class="col-6 align-self-center"><img class="weatherIcon left" src="https://openweathermap.org/img/w/' + icon + '.png"></div></div>');
 
-            weatherDiv.append('<li class="weatherLi list-group-item"></li>');
+        weatherDiv.html('<div class="row"><div class="h4 temp col-6 align-self-center"> High: ' + highTemp + '°F' + '</div><div class="col-6 align-self-center h4 temp"> Low: '+ lowTemp + '°F' +'</div></div>');
+            // append('<li class="weatherLi list-group-item"></li>');
             
-            weatherDiv.append('<li class="weatherLi list-group-item">Desc: ' + weatherDesc + '</li>');
+            // weatherDiv.append('<li class="weatherLi list-group-item">Desc: ' + weatherDesc + '</li>');
 
             
     
