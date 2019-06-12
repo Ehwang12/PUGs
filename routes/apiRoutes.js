@@ -37,7 +37,7 @@ module.exports = function(app) {
       newEventDrilled.push(req.body[key]);
     });
     console.log(newEventDrilled);
-    let newEventObject = {name: newEventDrilled[1], city:  newEventDrilled[2], StartTime: newEventDrilled[3]};
+    let newEventObject = {name: newEventDrilled[1], city:  newEventDrilled[2], StartTime: newEventDrilled[3], description: newEventDrilled[4]};
     db.pickUpGame.create(newEventObject).then(function(dbFunEvent){
       console.log('Event Created');
       res.json(dbFunEvent);
