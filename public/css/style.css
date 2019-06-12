@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+margin: 0 auto;
   /* Margin bottom by footer height */
   line-height: 1.5;
   font-family: 'Heebo', sans-serif!important;
@@ -20,8 +20,8 @@ i {
 
 body, html {
   height: 100%;
+  font-family: 'Poppins', sans-serif;
   margin: 0 auto;
-
 }
 a:hover {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+36,28343b+100;Grey+Black+3D */
@@ -177,11 +177,7 @@ input#materialContactFormName {
 }
 
 /**************** main/user feed *********************/
-body, html {
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  margin: 0 auto;
-}
+
 
 .bg-main {
   background-position: center;
