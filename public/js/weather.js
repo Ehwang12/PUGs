@@ -12,13 +12,25 @@ $(document).ready(function(){
         location + ",USA&APPID=d1fe11bbbd89325017da7da0cffc0c2b&units=imperial";
     
         $.getJSON(queryURL,function(result){
+<<<<<<< HEAD
+            // console.log( JSON.stringify(result, null, 2));
+=======
+>>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
             var mainWeather = result.weather;
             var currentTemp = result.main.temp;
             var highTemp = result.main.temp_max;
             var lowTemp = result.main.temp_min;
             var desc = result.weather[0].description;
+<<<<<<< HEAD
+            // console.log(desc)
 
             var icon= mainWeather[0].icon;
+            // console.log(icon);
+            // console.log(currentTemp + "°F")
+=======
+
+            var icon= mainWeather[0].icon;
+>>>>>>> 90e9b1ee4a3433ca86720cb56917614fff8a87e5
 
             for (let i=0; i < mainWeather.length; i++){
                 var weatherDiv = $("#weatherListDiv");

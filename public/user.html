@@ -291,6 +291,10 @@
             myPug.text(name+' '+time);
             myPug.addClass('list-group')
             listPugs.append(myPug);
+
+            $.get('/sendmail/'+time+'/'+name, function(){
+              type: 'GET'              
+            })
         })
 
         $('#goTime').on('click', function(event){
