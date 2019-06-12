@@ -45,7 +45,11 @@ module.exports = function(app) {
   });
 
   app.get('/findall', function(req, res){
-    db.pickUpGame.findAll({}).then(function(result){
+    db.pickUpGame.findAll({
+      order: [
+        ['id', 'DESC']
+      ]
+    }).then(function(result){
       res.json(result);
       })
   })

@@ -82,8 +82,14 @@
         </div>
 
         <!-- /weather widget -->
-      </div>
-      <!-- /Card -->
+        <!-- Feed Div -->
+        <div class="col-12">
+          <div class="card" id="allEvents">
+          </div>
+        </div>
+        <!-- /Feed Div -->
+    </div>
+    <!-- /Card -->
 
       <!-- My Pugs Card -->
       <div class="row">
@@ -179,26 +185,26 @@
               <label for="event_Loc" class="pl-1">CITY/STATE:</label>
               <select class="browser-default custom-select event-input" id="event_Loc">
                 <option selected>Location</option>
-                <option value="1">APPLE VALLEY</option>
-                <option value="2">BLAINE</option>
-                <option value="3">BLOOMINGTON</option>
-                <option value="4">BROOKLYN PARK</option>
-                <option value="5">BURNSVILLE</option>
-                <option value="6">COON RAPIDS</option>
-                <option value="7">DULUTH</option>
-                <option value="8">EAGAN</option>
-                <option value="9">EDEN PRAIRIE</option>
-                <option value="10">EDINA</option>
-                <option value="11">LAKEVILLE</option>
-                <option value="12">MAPLE GROVE</option>
-                <option value="14">MINNEAPOLIS</option>
-                <option value="15">MINNETONKA</option>
-                <option value="16">PLYMOUTH</option>
-                <option value="17">ROCHESTER</option>
-                <option value="18">ST. CLOUD</option>
-                <option value="19">ST. LOUIS PARK</option>
-                <option value="20">ST. PAUL</option>
-                <option value="20">WOODBURY</option>
+                <option value="APPLE VALLEY">APPLE VALLEY</option>
+                <option value="BLAINE">BLAINE</option>
+                <option value="BLOOMINGTON">BLOOMINGTON</option>
+                <option value="BROOKLYN PARK">BROOKLYN PARK</option>
+                <option value="BURNSVILLE">BURNSVILLE</option>
+                <option value="COON RAPIDS">COON RAPIDS</option>
+                <option value="DULUTH">DULUTH</option>
+                <option value="EAGAN">EAGAN</option>
+                <option value="EDEN PRAIRIE">EDEN PRAIRIE</option>
+                <option value="EDINA">EDINA</option>
+                <option value="LAKEVILLE">LAKEVILLE</option>
+                <option value="MAPLE GROVE">MAPLE GROVE</option>
+                <option value="MINNEAPOLIS">MINNEAPOLIS</option>
+                <option value="MINNETONKA">MINNETONKA</option>
+                <option value="PLYMOUTH">PLYMOUTH</option>
+                <option value="ROCHESTER">ROCHESTER</option>
+                <option value="ST. CLOUD">ST. CLOUD</option>
+                <option value="ST. LOUIS PARK">ST. LOUIS PARK</option>
+                <option value="ST. PAUL">ST. PAUL</option>
+                <option value="WOODBURY">WOODBURY</option>
               </select>
             </div>
           </div>
@@ -235,29 +241,55 @@
   <script type="text/javascript" src="./js/app.js"></script>
   <script type="text/javascript" src="./js/weather.js"></script>
   <script>
+      var allEvents = $('#allEvents');
+      var events;
       $(document).ready(function(){
-          $.get('/findall', {
+          $.get('/findall', function(data){
               type: 'GET'
-          }).then(function(result){
-      
-            for (let i=0; i<result.length; i++){
-                let events = $('<li>')
-                events.addClass("list-group-item row");
-                events.addClass("eventRendering");
-                let name = $('<p>');
-                name.addClass('col-4');
-                name.text(result[i].name);
-                let time = $('<p>');
-                time.addClass('col-4');
-                time.text(result[i].StartTime);
-                let city = $('<p>');
-                city.addClass('col-4');
-                city.text(result[i].city);
-                $('.eventRendering').append(time, city, name);
-                $("#allEvents").prepend(events); 
-                }
+              events = data; 
+              initializeEvents(events);
           })
-          
+
+
+        function initializeEvents(events){
+            allEvents.empty();
+            var eventsToAdd = [];
+            console.log(events);
+            for (let i=0; i<events.length; i++){
+                console.log(i);
+                eventsToAdd.push(createNewEvent(events[i]))
+            }
+            allEvents.prepend(eventsToAdd);
+            console.log(eventsToAdd);
+            }
+
+        function createNewEvent (events) {
+            let event = $('<div>');
+            let body = $('<div>');
+            let city = $('<p>');
+            let name = $('<p>');
+            let time = $('<p>');
+            let btn = $('<button>')
+            event.addClass("card");
+            event.addClass("eventRendering");
+            body.addClass('card-body');
+            btn.attr('type', 'button');
+            btn.attr('id', 'join');
+            btn.text('Join');
+            name.addClass('col-4');
+            time.addClass('col-4');
+            city.addClass('col-4');
+            time.text(events.StartTime);
+            name.text(events.name);
+            city.text(events.city);
+            body.append(name);
+            body.append(time);
+            body.append(city);
+            body.append(btn)
+            event.append(body)
+            return event; 
+        }
+
           $('#goTime').on('click', function(event){
               event.preventDefault();
               var newEvent = {
