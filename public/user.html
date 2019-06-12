@@ -215,7 +215,9 @@
       let aValue = localStorage.getItem('newUser');
       let currentUser = aValue.split(',')[1].split(':')[1].replace(/['"]+/g, '');
       var nameOfUser = $('#currentUser');
+      let currentEmail = aValue.split(',')[2].split(':')[1].replace(/['"]+/g, '');
       console.log(currentUser);
+      console.log(currentEmail);
       var allEvents = $('#allEvents');
       var listPugs = $('#listPugs');
       var events;
@@ -265,6 +267,7 @@
             btn.attr('type', 'button');
             btn.attr('event', events.name);
             btn.attr('time', events.StartTime);
+            btn.attr("email", currentEmail);
             btn.addClass('join');
             btn.addClass('btn btn-primary');
             btn.text('Join');
@@ -284,7 +287,7 @@
         $(document).on('click', '.join', function(event){
             var time = $(this).attr('time');
             var name = $(this).attr('event');
-
+            var email = $(this).attr('email');
             console.log(event);
 
             let myPug = $('<li>');
@@ -292,7 +295,7 @@
             myPug.addClass('list-group')
             listPugs.append(myPug);
 
-            $.get('/sendmail/'+time+'/'+name, function(){
+            $.get('/sendmail/'+time+'/'+name + '/' +email, function(){
               type: 'GET'              
             })
         })
