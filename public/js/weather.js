@@ -14,14 +14,15 @@ $(document).ready(function () {
         if (err) {
             location = "55420";
         }
-        console.log(JSON.stringify(result.name, null, 2))
+        console.log(JSON.stringify(result, null, 2))
         var mainWeather = result.weather;
-        var currentTemp = result.main.temp;
+        var currentTemp = Math.round(result.main.temp);
         var highTemp = result.main.temp_max;
         var lowTemp = result.main.temp_min;
         var desc = result.weather[0].description;
         var cityname = result.name;
         var icon = mainWeather[0].icon;
+        console.log(currentTemp);
 
         for (let i = 0; i < mainWeather.length; i++) {
             var weatherDiv = $("#weatherListDiv");
