@@ -14,13 +14,13 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
-
-  <link href="https://fonts.googleapis.com/css?family=Heebo|Josefin+Sans&display=swap" rel="stylesheet">
+  <!-- google font -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap" rel="stylesheet">
 
 
 </head>
 
-<body class="tempting-azure-gradient">
+<body>
   <div class="bg-main tempting-azure-gradient">
     <div class="container-fluid">
       <!-- Card -->
@@ -99,7 +99,7 @@
         <!-- /Feed Div -->
       </div>
       <!-- /My Pugs Card -->
-      <!-- container div -->
+      <!-- Copyright Card -->
       <div class="row">
         <div class="col-md-4 ml-4 text-center">
           <div class="card" id="copyRightCard">
@@ -110,6 +110,7 @@
         </div>
 
       </div>
+    <!-- container div -->
     </div>
     <!-- bg div -->
   </div>
@@ -238,13 +239,16 @@
             let event = $('<div>');
             let body = $('<div>');
             let city = $('<p>');
-            let name = $('<p>');
+            let name = $('<h4>');
             let time = $('<p>');
             let descript = $('<p>');
             let btn = $('<button>')
             event.addClass("card");
             event.addClass("eventRendering");
             body.addClass('card-body');
+            time.addClass('float-right');
+            name.addClass('bold');
+            city.addClass('bold');
             btn.attr('type', 'button');
             btn.attr('event', events.name);
             btn.addClass('join');

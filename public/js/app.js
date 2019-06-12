@@ -31,9 +31,3 @@ $(document).ready(function () {
     $("#modalEvent").modal();
   });
 
-// Create event button click event handler
-  $("#createEvent-btn").click(function(){
-    
-  });
-
-});

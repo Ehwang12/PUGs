@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
+    "username": "nodeuser",
+    "password": "nodeuser",
     "database": "pug_db",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "port": 8889,
     "dialect": "mysql"
   },
