@@ -213,6 +213,7 @@
   <script type="text/javascript" src="./js/weather.js"></script>
   <script>
       let aValue = localStorage.getItem('newUser');
+      console.log(aValue);
       let currentUser = aValue.split(',')[1].split(':')[1].replace(/['"]+/g, '');
       var nameOfUser = $('#currentUser');
       console.log(currentUser);
