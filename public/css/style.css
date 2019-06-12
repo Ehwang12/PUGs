@@ -9,7 +9,8 @@ body {
   margin-bottom: 60px;
   /* Margin bottom by footer height */
   line-height: 1.5;
-  font-family: "Raleway";
+  font-family: 'Heebo', sans-serif!important;
+
   font-style: normal;
 }
 
