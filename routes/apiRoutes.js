@@ -54,6 +54,16 @@ module.exports = function(app) {
       })
   })
 
+  app.delete('/delete/:id/', function(req, res){
+    let eventId = req.params.id;
+    console.log(eventId)
+    db.pickUpGame.destroy({
+      where: {
+        id: eventId
+      }
+    })
+  })
+
 const sendmail = require('sendmail')();
  app.get('/sendmail/:time/:name/:email', function(req,res){
    let time = req.params.time;
@@ -71,6 +81,7 @@ const sendmail = require('sendmail')();
    });
 
  })
+
  }
 
 
