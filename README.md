@@ -2,7 +2,7 @@
 
 ### Created By
 
-    * Esther Hwang, Ashley Feijoo, Sabrina Thong, Jeff Samuels, Lorenzo Dandrea. *
+     Esther Hwang, Ashley Feijoo, Sabrina Thong, Jeff Samuels, Lorenzo Dandrea. 
 
 ## Overview :fire: :fire: :fire:
 
