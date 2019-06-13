@@ -7,12 +7,7 @@ $(document).ready(function () {
     var emptyArr = [];
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=" + location + ",us&APPID=d1fe11bbbd89325017da7da0cffc0c2b&units=imperial";
 
-    //   $.getJSON("http://api.openweathermap.org/data/2.5/weather?zip="+ locationZip + ",us&APPID=d1fe11bbbd89325017da7da0cffc0c2b",function(result)
-
     $.getJSON(queryURL, function (result, err) {
-        if (err) {
-            location = "55420";
-        }
         var mainWeather = result.weather;
         var currentTemp = Math.round(result.main.temp);
         var highTemp = result.main.temp_max;
