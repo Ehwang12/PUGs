@@ -1,6 +1,6 @@
 var db = require("../models");
 var path = require('path');
-
+var nodemailer = require('nodemailer');
 module.exports = function(app) {
     
   //this route will be for when they hit submit on the splash page and are then redirected to the home page
@@ -53,4 +53,23 @@ module.exports = function(app) {
       res.json(result);
       })
   })
-};
+
+const sendmail = require('sendmail')();
+ app.get('/sendmail/:time/:name', function(req,res){
+   let time = req.params.time;
+   let name = req.params.name;
+   sendmail({
+       from: 'sabrinaanhthong@gmail.com',
+       to: 'sabrinaanhthong@gmail.com ',
+       subject: 'Joined Event: '+name,
+       html: 'You are now added to the event! it beigns at :' +time,
+     }, function(err, reply) {
+       //console.log(err && err.stack);
+       console.dir(reply);
+       console.log("There")
+   });
+
+ })
+ }
+
+

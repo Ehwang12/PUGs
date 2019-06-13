@@ -9,7 +9,6 @@ body {
 margin: 0 auto;
   /* Margin bottom by footer height */
   line-height: 1.5;
-  font-family: 'Heebo', sans-serif!important;
 
   font-style: normal;
 }
@@ -20,7 +19,7 @@ i {
 
 body, html {
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif!important;
   margin: 0 auto;
 }
 a:hover {
@@ -79,6 +78,8 @@ input.select-dropdown {
   right: -1em;
   background: black;
   font-style: normal!important;
+ color:white;
+
 }
 /* ID Selectors End -------*/
 
@@ -89,6 +90,10 @@ input.select-dropdown {
   line-height: 1.5;
 }
 
+.desc{
+  font-size: 1.5rem;
+  line-height: .8;
+}
 
 .footer {
   position: absolute;
@@ -206,11 +211,30 @@ input#materialContactFormName {
 }
 
 .eventDiv {
-  margin-top: -9em;
+  margin-top: -5em;
 }
 
 .bold {
   font-weight: bold;
+}
+
+.city {
+    line-height: .9;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: lightgrey!important;
+font-style: italic!important;
+  
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: lightgrey!important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: lightgrey!important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: lightgrey!important;
 }
 
 #axu {
@@ -290,7 +314,7 @@ a.btn.btn-primary.waves-effect:hover {
 }
 
 .weatherIcon{
-  width:50px;
+  width:65px;
 }
 /* Extra small devices (portrait phones, less than 576px) */
 /* No media query since this is the default in Bootstrap */

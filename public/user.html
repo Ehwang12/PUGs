@@ -7,7 +7,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>My PUGS Feed</title>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body class="tempting-azure-gradient">
   <div class="bg-main tempting-azure-gradient">
     <div class="container-fluid">
       <!-- Card -->
@@ -53,10 +53,10 @@
 
         <!-- Weather Widget -->
 
-        <div class="col-md-6 offset-1 mt-3 mb-5" id="axu">
+        <div class="col-md-6 offset-1 mt-4 mb-5" id="axu">
           <div class="card card-cascade mb-5 p-0">
             <!-- Card image -->
-            <div class="view view-cascade gradient-card-header heavy-rain-gradient  p-1 flex-row">
+            <div class="view view-cascade gradient-card-header aqua-gradient  p-1 flex-row">
               <!-- Title -->
               <h2 class="row card-header-title m-0" id="currentTemp">News Title</h2>
               <!-- Text -->
@@ -102,8 +102,8 @@
       <div class="row">
         <div class="col-md-4 ml-4 text-center">
           <div class="card" id="copyRightCard">
-            <div class="card-body">
-              <p class="card-title text-muted text-smaller text-small">2019 © Pick Up Games!</p>
+            <div class="card-body p-0">
+              <p class="card-title font-italic text-muted text-smaller text-small m-0 p-1">2019 © Pick Up Games!</p>
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@
 
           <div class="form-group">
             <label for="materialContactFormName" class="pl-1">EVENT:</label>
-            <input type="text" id="materialContactFormName" class="form-control pl-1 event-input">
+            <input type="text" id="materialContactFormName" class="form-control pl-1 event-input" placeholder="Ex. Basketball at North Commons Park">
 
           </div>
           <!-- Radio -->
@@ -210,109 +210,17 @@
   <script type="text/javascript" src="js/mdb.min.js"></script>
   
   <script type="text/javascript" src="./js/app.js"></script>
+
   <script type="text/javascript" src="./js/weather.js"></script>
+
+  <script type="text/javascript" src="./js/all.min.js"></script>
+
+  <script type="text/javascript" src="./js/moment.min.js"></script>
+
+  <script type="text/javascript" src="render.js"></script>
+      
   <script>
-      let aValue = localStorage.getItem('newUser');
-      console.log(aValue);
-      let currentUser = aValue.split(',')[1].split(':')[1].replace(/['"]+/g, '');
-      var nameOfUser = $('#currentUser');
-      console.log(currentUser);
-      var allEvents = $('#allEvents');
-      var listPugs = $('#listPugs');
-      var events;
-      $(document).ready(function(){
-          $.get('/findall', function(data){
-              type: 'GET'
-              events = data; 
-              initializeEvents(events);
-            })
-            
-        function userName () {
-            let name = $('<h4>');
-                name.addClass('card-title');
-                name.addClass('text-center');
-                name.text(currentUser);
-                nameOfUser.append(name);
-            }
-                
-            userName();
-
-        function initializeEvents(events){
-            allEvents.empty();
-            var eventsToAdd = [];
-            console.log(events);
-            for (let i=0; i<events.length; i++){
-                console.log(i);
-                eventsToAdd.push(createNewEvent(events[i]))
-            }
-            allEvents.prepend(eventsToAdd);
-            console.log(eventsToAdd);
-            }
-
-        function createNewEvent (events) {
-            let event = $('<div>');
-            let body = $('<div>');
-            let city = $('<p>');
-            let name = $('<h4>');
-            let time = $('<p>');
-            let descript = $('<p>');
-            let btn = $('<button>')
-            event.addClass("card");
-            event.addClass("eventRendering");
-            body.addClass('card-body');
-            time.addClass('float-right');
-            name.addClass('bold');
-            city.addClass('bold');
-            btn.attr('type', 'button');
-            btn.attr('event', events.name);
-            btn.attr('time', events.StartTime);
-            btn.addClass('join');
-            btn.addClass('btn btn-primary');
-            btn.text('Join');
-            descript.text(events.description);
-            time.text(events.StartTime);
-            name.text(events.name);
-            city.text(events.city);
-            body.append(name);
-            body.append(time);
-            body.append(city);
-            body.append(descript);
-            body.append(btn);
-            event.append(body);
-            return event; 
-        }
-
-        $(document).on('click', '.join', function(event){
-            var time = $(this).attr('time');
-            var name = $(this).attr('event');
-
-            console.log(event);
-
-            let myPug = $('<li>');
-            myPug.text(name+' '+time);
-            myPug.addClass('list-group')
-            listPugs.append(myPug);
-        })
-
-        $('#goTime').on('click', function(event){
-            event.preventDefault();
-            var newEvent = {
-                name: $('#materialContactFormName').val().trim(),
-                city: $('#event_Loc').val().trim(),
-                StartTime: $('#event_Time').val(),
-                description: $('#form79textarea').val().trim()
-            }
-            console.log(newEvent)
-            $.post('/newevent', {
-                type: 'POST',
-                data: newEvent
-            }).then(function(result){
-                console.log(result);
-                location.reload();
-            });
-        }) 
-      })
-    
+      
   </script>
 </body>
 
