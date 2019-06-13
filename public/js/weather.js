@@ -1,7 +1,6 @@
 $(document).ready(function () {
     let aValue = localStorage.getItem('newUser');
     let location = aValue.split(',')[3].split(':')[1].replace(/['"]+/g, '');
-    console.log(location)
     if (location === "Location"){
         location = '55420';
     }
@@ -14,7 +13,6 @@ $(document).ready(function () {
         if (err) {
             location = "55420";
         }
-        console.log(JSON.stringify(result, null, 2))
         var mainWeather = result.weather;
         var currentTemp = Math.round(result.main.temp);
         var highTemp = result.main.temp_max;
@@ -22,8 +20,6 @@ $(document).ready(function () {
         var desc = result.weather[0].description;
         var cityname = result.name;
         var icon = mainWeather[0].icon;
-        console.log(currentTemp);
-
         for (let i = 0; i < mainWeather.length; i++) {
             var weatherDiv = $("#weatherListDiv");
             emptyArr.push(mainWeather[i].main);
