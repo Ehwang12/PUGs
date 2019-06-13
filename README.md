@@ -47,4 +47,4 @@
 
 * On the Landing page there is an information button to pull up a modal.
 
-[![Image from Gyazo](https://gyazo.com/ca17ffb8ea45c6fea1192ec9be363f01)
+[![Image from Gyazo](https://i.gyazo.com/ca17ffb8ea45c6fea1192ec9be363f01.gif)](https://gyazo.com/ca17ffb8ea45c6fea1192ec9be363f01)
