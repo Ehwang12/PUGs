@@ -21,8 +21,8 @@
 * [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
 * [MomentJs](https://momentjs.com/docs/#/plugins)
 * [OpenWeatherAPI](https://openweathermap.org/api)
-* [SendMail](https://www.npmjs.com/package/sendmail) * New Technology
-* [MDBootstrap](https://mdbootstrap.com/)
+* [SendMail](https://www.npmjs.com/package/sendmail) * _New Technology_
+* [MDBootstrap](https://mdbootstrap.com/) * _New Technology_
 
 ***
 
@@ -45,4 +45,4 @@
 
 #### Info Button Modal
 
-* On the Landing page there is an information button to pull up a modal. 
+* On the Landing page there is an information button to pull up a modal.
