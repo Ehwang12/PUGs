@@ -21,8 +21,8 @@
 * [Handlebars.js](https://www.npmjs.com/package/express-handlebars)
 * [MomentJs](https://momentjs.com/docs/#/plugins)
 * [OpenWeatherAPI](https://openweathermap.org/api)
-* [NodeMailer](https://nodemailer.com/about/)
-* [MDBootstrap](https://mdbootstrap.com/)
+* [SendMail](https://www.npmjs.com/package/sendmail) * _New Technology_
+* [MDBootstrap](https://mdbootstrap.com/) * _New Technology_
 
 ***
 
@@ -42,3 +42,9 @@
 ![Pugs User Page](https://i.gyazo.com/2d7822b2dae971733964e7e0c82f8b10.jpg)
 
 ***
+
+#### Info Button Modal
+
+* On the Landing page there is an information button to pull up a modal.
+
+[![Image from Gyazo](https://i.gyazo.com/ca17ffb8ea45c6fea1192ec9be363f01.gif)](https://gyazo.com/ca17ffb8ea45c6fea1192ec9be363f01)
