@@ -54,13 +54,24 @@ module.exports = function(app) {
       })
   })
 
+  app.delete('/delete/:id/', function(req, res){
+    let eventId = req.params.id;
+    console.log(eventId)
+    db.pickUpGame.destroy({
+      where: {
+        id: eventId
+      }
+    })
+  })
+
 const sendmail = require('sendmail')();
- app.get('/sendmail/:time/:name', function(req,res){
+ app.get('/sendmail/:time/:name/:email', function(req,res){
    let time = req.params.time;
    let name = req.params.name;
+   let email = req.params.email;
    sendmail({
-       from: 'sabrinaanhthong@gmail.com',
-       to: 'sabrinaanhthong@gmail.com ',
+       from: email,
+       to: email,
        subject: 'Joined Event: '+name,
        html: 'You are now added to the event! it beigns at :' +time,
      }, function(err, reply) {
@@ -70,6 +81,7 @@ const sendmail = require('sendmail')();
    });
 
  })
+
  }
 
 
